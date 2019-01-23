@@ -1,0 +1,367 @@
+/* 默认图片路径 */
+@urlpath:'../images';
+
+/*
+* name: iconfont（阿里巴巴矢量图）
+* link: http://www.iconfont.cn/
+* time: 6-17
+* author：josh
+* 特点：
+	1.自由变化大小
+	2、自由修改颜色
+	3、可以添加一些视觉效果如：阴影、旋转、透明度。
+	4、兼容IE6
+*/
+
+/*@font-face {
+  font-family: 'iconfont';
+  src: url('http://at.alicdn.com/t/font_1402985507_073299.eot');
+  src: url('http://at.alicdn.com/t/font_1402985507_073299.eot?#iefix') format('embedded-opentype'),
+  url('http://at.alicdn.com/t/font_1402985507_073299.woff') format('woff'),
+  url('http://at.alicdn.com/t/font_1402985507_073299.ttf') format('truetype'),
+  url('http://at.alicdn.com/t/font_1402985507_073299.svg#iconfont') format('svg');
+}*/
+
+/*
+* 使用方法
+1.css
+// 默认样式
+.iconfontBase{
+    font-family:"iconfont"; //引用iconfont自定义字体
+	font-style:normal;		//尺寸类型
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// 配置样式
+.icon{
+    overflow: hidden;
+    display:block;
+    color: #737383;
+    cursor: pointer; //手型显示
+    font-size: 32px; //设置图标大小
+    line-height: 100px;
+    transition: font-size 0.25s ease-out 0s; //动态效果
+}
+
+2.html
+<i class="iconfontBase icon">&#xe600;</i>
+
+*PC端应用常见问题/解决办法
+	1.字体图标在safair或chrome浏览器下被加粗
+
+		(1).由于字体图标存在半个像素的锯齿，在浏览器渲染的时候直接显示一个像素了，导致在有背景下的图标显示感觉加粗
+
+		(2).应用字体图标的时候需要对图标样式进行抗锯齿处理，CSS代码设置如下:
+
+		.iconfont{-webkit-font-smoothing: antialiased;}
+
+	2.字体图标在IE7浏览器显示中图标右侧出现小方框现象；
+
+		(1).对引用字体图标的非块标签进行以下CSS定义:
+
+		.iconfont{display:block;}
+
+	3.字体图标在pc端的chrome浏览器下出现严重的锯齿；
+
+		(1).出现以上现象可以对字体图标的边缘进行模糊；（只支持webkit内核浏览器,参数数值不宜设置得很大，这会带来图标加粗的问题）
+
+		(2).-webkit-text-stroke-width: 0.2px;	(webkit内核浏览器边缘模糊)
+
+*Android端应用教程/在IOS中使用iconfont
+
+	1.查看原文链接 http://www.iconfont.cn/help/iconuse.html
+*/
+
+
+
+
+/*
+* name: naimateBTN（css3动态按钮）
+* link: http://www.iconfont.cn/
+* time: 6-27
+* author：josh
+* 特点：
+	1. 高级浏览器有炫酷效果
+	2. 配合iconfont 高炫酷显示
+	3. 支持i8+(效果简单) ff chrmo 高炫酷
+	4. 命名方案 ：animate{n}-btn:
+*/
+
+/* animate-btn 默认配置*/
+.animate-btn{
+    position: relative;
+    overflow: hidden;
+    font-weight: normal;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    outline: none;
+    font-family: inherit; /* inherit 继承父元素的字体系列样式*/
+    font-size: inherit; /* inherit 继承父元素的字体系列样式*/
+    color: inherit;  /*inherit 继承父元素的字体系列样式*/
+    font-weight: normal;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+
+    /*/ animate-btn span 默认配置/*/
+    span{
+    	position: relative;
+	    display: inline-block;
+	    width: 100%;
+	    height: 100%;
+	    -webkit-transition: all 0.3s;
+	    -moz-transition: all 0.3s;
+	    -ms-transition: all 0.3s;
+	    -o-transition: all 0.3s;
+	    transition: all 0.3s;
+	    -webkit-transform: translate3d(0, 0, 0);
+	    -moz-transform: translate3d(0, 0, 0);
+	    z-index: 99;
+    }
+
+    /*/ animate-btn:before 默认配置/*/
+    &:before {
+	    position: absolute;
+	    height: 100%;
+	    width: 100%;
+	    font-size: 160%;
+	    left: 0;
+	    top: -100%;
+	    -webkit-transition: all 0.3s;
+	    -moz-transition: all 0.3s;
+	    -ms-transition: all 0.3s;
+	    -o-transition: all 0.3s;
+	    transition: all 0.3s;
+	    -webkit-font-smoothing: antialiased;
+	    -webkit-text-stroke-width: 0.2px;
+	    -moz-osx-font-smoothing: grayscale;
+	    font-style: normal;
+	    font-size: 20px;
+	    font-weight: normal;
+	    font-family: "iconfont";
+	}
+
+	&:hover{
+		 text-decoration: none;
+
+		 span{
+		 	-webkit-transform:translate(0,300%);
+   			-moz-transform:translate(0,300%);
+		 }
+	}
+
+	&:hover:before{
+		top: 0;
+	}
+}
+
+
+/*  基础皮肤样式配置*/
+.ibtn-style{
+    width: 118px;
+    height: 36px;
+    line-height: 36px;
+    margin-right: 10px;
+    border-radius: 2px;
+    border: none;
+    background-color:#ff4e00; /*// 背景色*/
+}
+
+.ibtn-style,
+.ibtn-style:hover{
+	 color:#fff;
+}
+
+/* 可要可不要，背景如果不写，按按钮底色显示 */
+.ibtn-style:before,
+.ibtn-style:hover:before {
+	color:#fff;
+    background-color:blue;
+}
+
+.ibtn-style span {
+  /*  background-color:red;*/
+    font-size: 12px;
+}
+
+/* 兼容ie 鼠标移动上去，修改span颜色 */
+.ibtn-style:hover span {
+   background-color:#4bacff;
+   color:#fff;
+}
+
+
+
+/*
+* name: input-append(模拟bootstrap)
+* link: http://docs.bootcss.com/bootstrap-2.3.2/docs/
+* time: 6-27
+* author：josh
+* 特点：
+	1. 可输入式模拟下拉框
+	2. 下拉内容可以定制
+	3. 带动态效果（阴影，渐变）
+*/
+
+.input-append{
+	display: inline-block;
+    font-size: 0;
+    vertical-align: middle;
+    white-space: nowrap;
+
+    .ui-input-span{
+    	margin-bottom: 0;
+    	.border-radius-custom (@topleft: 3px, @topright: 0px, @bottomleft: 3px, @bottomright: 0px);
+		  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+		     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+		          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    }
+
+    .btn-group {
+	  position: relative;
+	  display: inline-block;
+	  *display: inline;
+	  *margin-left: .3em;
+	  font-size: 0;
+	  white-space: nowrap;
+	  vertical-align: middle;
+	  *zoom: 1;
+	  margin-left:-1px;
+
+	  	.dropdown-toggle {
+			.border-radius-custom (@topleft: 0px, @topright: 3px, @bottomleft: 0px, @bottomright: 3px);
+		}
+	}
+
+	.open .dropdown-toggle {
+	  background-color: #e6e6e6;
+	  background-image: none;
+	  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+	     -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+	          box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+	}
+
+
+	.btn {
+	  display: inline-block;
+	  *display: inline;
+	  padding: 2px 12px;
+	  margin-bottom: 0;
+	  *margin-left: .3em;
+	  font-size: 14px;
+	  line-height: 20px;
+	  color: #333333;
+	  text-align: center;
+	  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+	  vertical-align: top;
+	  cursor: pointer;
+	  background-color: #f5f5f5;
+	  *background-color: #e6e6e6;
+	  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+	  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+	  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+	  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+	  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+	  background-repeat: repeat-x;
+	  border: 1px solid #cccccc;
+	  *border: 0;
+	  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+	  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	  border-bottom-color: #b3b3b3;
+	 .border-radius (@radius: 3px);
+	  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+	  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+	  *zoom: 1;
+	  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+
+
+	    &:hover{
+		  color: #333333;
+		   background-color: #e6e6e6;
+		  *background-color: #d9d9d9;
+		  text-decoration: none;
+		  background-position: 0 -15px;
+		  -webkit-transition: background-position 0.1s linear;
+		     -moz-transition: background-position 0.1s linear;
+		       -o-transition: background-position 0.1s linear;
+		          transition: background-position 0.1s linear;
+		}
+
+		.caret {
+		  margin-top: 8px;
+		  margin-left: 0;
+		}
+	}
+
+	.caret {
+	  display: inline-block;
+	  width: 0;
+	  height: 0;
+	  vertical-align: top;
+	  border-top: 4px solid #000000;
+	  border-right: 4px solid transparent;
+	  border-left: 4px solid transparent;
+	}
+
+	.dropdown-menu {
+	  position: absolute;
+	  top: 100%;
+	  left: 0;
+	  z-index: 1000;
+	  display: none;
+	  float: left;
+	  min-width: 235px;
+	  padding: 5px 0;
+	  margin: 2px 0 0;
+	  list-style: none;
+	  background-color: #ffffff;
+	  border: 1px solid #ccc;
+	  border: 1px solid rgba(0, 0, 0, 0.2);
+	  *border-right-width: 2px;
+	  *border-bottom-width: 2px;
+	 .border-radius (@radius: 3px);
+	  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	     -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	  -webkit-background-clip: padding-box;
+	     -moz-background-clip: padding;
+	          background-clip: padding-box;
+
+      	li{
+			float: left;
+			line-height: 20px;
+			a{
+				display: block;
+				padding: 5px 15px;
+				width:48px;
+				clear: both;
+				font-weight: normal;
+				line-height: 20px;
+				font-size: 14px;
+				white-space: nowrap;
+
+				&:hover{
+					  color: #ffffff;
+					  text-decoration: none;
+					  background-color: #0081c2;
+					  background-image: -moz-linear-gradient(top, #0088cc, #0077b3);
+					  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0077b3));
+					  background-image: -webkit-linear-gradient(top, #0088cc, #0077b3);
+					  background-image: -o-linear-gradient(top, #0088cc, #0077b3);
+					  background-image: linear-gradient(to bottom, #0088cc, #0077b3);
+					  background-repeat: repeat-x;
+					  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0077b3', GradientType=0);
+				}
+			}
+      	}
+	}
+
+}

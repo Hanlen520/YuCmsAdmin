@@ -1,0 +1,157 @@
+/*
+  @名称: css-icons
+  @功能: 定义通用图标
+  @time:  8-9
+*/
+
+/* 默认字体颜色 */
+@text-warn:#fdebc2; /*  警告 */
+@text-error:#ffecec; /* 错误 */
+@text-info:#e0f2fe; /* 提示 */
+@text-success:#f4f9e8; /* 成功 */
+
+/*  行内帮助信息 */
+.ui-from-status-succeed,
+.ui-from-status-error,
+.ui-from-status-warn,
+.ui-from-status-info{
+  display: inline-block;
+  *display: inline;
+  height: 27px;
+  line-height: 27px;
+  margin-left: 5px;
+  margin-right: 3px;
+  padding-left: 30px;
+  padding-right: 8px;
+  color: #999;
+  background-image: url('@{urlpath}/icons_from.png');
+  background-repeat: no-repeat;
+  .border-radius (@radius: 3px);
+  font-size: 12px;
+  vertical-align: middle;
+  *zoom: 1;
+}
+
+.ui-from-status-succeed{
+  	background-position: 0 -27px;
+}
+
+.ui-from-status-error{
+	background-position: 0 0px;
+}
+
+.ui-from-status-warn{
+	background-position: 0 -81px;
+}
+
+.ui-from-status-info{
+	background-position: 0 -54px;
+}
+
+.ui-bg-succeed{
+	background-color: @text-success;
+}
+
+.ui-bg-error{
+	background-color: @text-error;
+}
+
+.ui-bg-warn{
+	background-color: @text-warn;
+}
+
+.ui-bg-info{
+	background-color: @text-info;
+}
+
+.ui-border-succeed{
+	margin-top: 3px;
+	border: #9bc626 1px solid;
+}
+
+.ui-border-error{
+	margin-top: 3px;
+	border: #ff6666 1px solid;
+}
+
+.ui-border-warn{
+	margin-top: 3px;
+	border:#f8bd27 1px solid;
+}
+
+.ui-border-info{
+	margin-top: 3px;
+	border: #63afed 1px solid;
+}
+
+.icon-succeed,
+.icon-error,
+.icon-warn,
+.icon-info{
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background-image: url('@{urlpath}/icons_from.png');
+  background-repeat: no-repeat;
+  vertical-align: top;
+}
+
+/*.icon-succeed{
+  background-position: 0 -135px;
+}
+
+.icon-error{
+  background-position: 0 -241px;
+}
+
+.icon-warn{
+  background-position: 0 -188px;
+}
+
+.icon-info{
+  background-position: 0 -294px;
+}*/
+
+.icon-succeed{
+  background-position: 0 -135px;
+}
+
+.icon-error{
+  background-position: 0 -231px;
+}
+
+.icon-warn{
+  background-position: 0 -183px;
+}
+
+.icon-info{
+  background-position: 0 -279px;
+}
+
+.ui-icons-privilege,
+.ui-icons-promotion,
+.ui-icons-new,
+.ui-icons-recommend{
+  display: inline-block;
+  background-image: url('@{urlpath}/icons_from.png');
+  background-repeat: no-repeat;
+  height: 18px;
+  padding:0 3px;
+  vertical-align: middle;
+}
+.ui-icons-privilege{
+  width: 35px;
+  background-position: 0 -436px;
+}
+.ui-icons-promotion{
+  width: 35px;
+  background-position: 0 -459px;
+}
+.ui-icons-new{
+  width: 23px;
+  background-position: 0 -505px;
+}
+.ui-icons-recommend{
+  width: 35px;
+  background-position: 0 -482px;
+}

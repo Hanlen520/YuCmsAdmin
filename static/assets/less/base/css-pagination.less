@@ -1,0 +1,247 @@
+/**
+ *  通用page切换
+ */
+@pag-a-color:#999999;/* 默认字体颜色 */
+@pag-a-background-color:#fff; /* 默认背景色 */
+@pag-a-border-color:#fff;/* 默认边框颜色 */
+@pag-ahover-color:#5c5bc3; /* hover 字体颜色 */
+@pag-ahover-border-bcolor:#cecded; /* hover 边框颜色 */
+@pag-no-color:#aaa;/* 不能点击字体颜色 */
+@pag-no-border-color:#fff; /* 不能点击边框颜色 */
+@pag-cur-color:#fff; /* 选中状态字体颜色 */
+@pag-cur-background-color:#5c5bc3; /* 选中状态背景颜色 */
+@pag-cur-border-color:#63afed; /*选中状态边框颜色 */
+.pagination .page-prev, .pagination .page-next, .pagination .page-skip button{
+    background-image:url('@{urlpath}/page_icon.png'); background-repeat:no-repeat;
+   .border-radius (@radius: 3px);
+}
+.pagination{
+  height:26px;
+  float:left;
+  position:relative;
+  left:50%;
+  padding:20px 0 10px;
+}
+.page-bottom{
+  position:relative;
+  left:-50%;
+  height:25px;
+}
+*html .page-bottom{
+  float:left;
+}
+.pagination a, 
+.page-break, 
+.page-skip, 
+.page-cur{
+  float:left;
+  height:20px;
+  line-height:20px;
+  min-width:11px;
+  _width:auto;
+  padding:3px 6px;
+  margin-right:2px;
+  text-align:center;
+  white-space:nowrap;
+  vertical-align:middle;
+}
+.pagination a{
+  /*background-color:@pag-a-background-color;
+  border:solid 1px @pag-a-border-color;*/
+  /*.border-radius (@radius: 2px);*/
+  color:@pag-a-color;
+  &:hover{
+    background-color:@pag-ahover-border-bcolor;
+    color:@pag-ahover-color;
+    .border-radius (@radius: 3px);
+    text-decoration:none;
+  }
+}
+
+.pagination .page-prev,
+.pagination .page-next{
+  width: 24px;
+  border:#cecfd1 1px solid;
+  background-color: #f8f8f8;
+  padding:2px 0;
+
+  &:hover{
+    background-color: #f8f8f8;
+  }
+}
+.pagination .page-prev{
+  background-position:9px 0;
+  margin-right:8px;
+ /* &:hover{
+    background-position:-2px 1px;
+  }*/
+}
+.pagination .prev-no,
+.pagination .prev-no:hover{
+  background-position:9px -52px;
+  /*border-color:@pag-no-border-color;
+  color:@pag-no-color;*/
+  cursor:default;
+}
+.pagination .page-next{
+  background-position:9px -26px;
+  margin-left:6px;
+ /* &:hover{
+    background-position:40px -19px;
+  }*/
+}
+.pagination .next-no, .pagination .next-no:hover{
+  background-position:9px -78px;
+ /* border-color:@pag-no-border-color;*/
+  /*color:@pag-no-color;*/
+  cursor:default;
+}
+.pagination .page-cur{
+  background-color:@pag-cur-background-color;
+/*  border:1px solid @pag-cur-border-color;*/
+  color:@pag-cur-color;
+  .border-radius (@radius: 3px);
+  cursor:default;
+}
+.pagination .page-skip{
+  color:#3d9ee9;
+  width:auto;
+ /* & input{
+    border:solid 1px #ccc;
+    color:#666;
+    width:30px;
+    height:18px;
+    margin:0 5px;
+    text-align:center;
+    vertical-align:top;
+    *vertical-align:middle;
+    *margin-top:-4px;
+  }
+  & button{
+    overflow:hidden;
+    background-position:0 -80px;
+    border:0;
+    width:37px;
+    height:19px;
+    margin:0 0 0 5px;
+    text-indent:-999em;
+    &:hover{
+      background-position:0 -105px;
+    }
+  }*/
+}
+
+.pagleft{
+  float:left;
+  left:0;
+  overflow:hidden;
+  & .page-bottom{
+    left:0;
+  }
+}
+
+.pagright{
+  float:right;
+  left:0;
+  overflow:hidden;
+  & .page-bottom{
+    left:0;
+  }
+}
+
+
+/**  **/
+.pagskin2{
+  a{
+    color:#3d9ee9;
+    &:hover{
+      background-color:#e1eff9;
+      color:#3d9ee9;
+    }
+  }
+  .page-cur{
+     background-color:#e1eff9;
+     color:#3d9ee9;
+  }
+ .page-break{
+     color:#3d9ee9;
+ }
+ .page-prev,
+ .page-next{
+    background-color: #fff;
+      &:hover{
+        background-color: #fff;
+      }
+   }
+}
+
+/*
+.ui-minpage{
+  a, .ui-page-active{
+    float:left;
+    height:18px;
+    margin-right:5px;
+    min-width:11px;
+    vertical-align:middle;
+    text-align:center;
+    white-space:nowrap;
+    padding:0 4px;
+    _width:auto;
+
+    &.ui-page-prev, &.ui-page-next{
+      width: 20px;
+      height: 20px;
+      overflow: hidden;
+      padding: 0;
+      background-image: url("@{urlpath}/ui_minpage_sprite.png");
+      background-repeat: no-repeat;
+      border: 0;
+    }
+  }
+  a{
+    background-color: #fff;
+    border: 1px solid #fff;
+    color: #666;
+    &:hover{
+      border-color: #ccc;
+      text-decoration:none;
+    }
+  }
+  .ui-page-active{
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #666;
+  }
+  .ui-page-prev{
+    width:auto;
+    background-position:0 -30px;
+
+    &:hover{
+      background-position:0 -60px;
+    }
+  }
+  .ui-prev-no{
+    background-position:0 0;
+    cursor: default;
+    
+    &:hover{
+      background-position:0 0;
+    }
+  }
+  .ui-page-next{
+    width:auto;
+    background-position:-30px -30px;
+
+    &:hover{
+      background-position:-30px -60px;
+    }
+  }
+  .ui-next-no{
+    background-position:-30px 0;
+    cursor: default;
+    
+    &:hover{
+      background-position:-30px 0;
+    }
+  }
+}*/

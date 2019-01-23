@@ -1,0 +1,318 @@
+/**
+ * @name: CSS 
+ * @overview: 杭州拜善晟生物科技有限公司
+ * @require: ["lessfn.less"]
+ * @author: 陈禹锟
+ * @time : 11/19;
+ */
+
+/* 默认系统a标签 */
+a{
+  color:#666;
+  &:hover{
+    color:#d10b10;
+    text-decoration: none;
+  }
+}
+.h{
+   color: #d10b10;
+}
+.c333{color:#333}
+.c999{color:#999}
+.orange{color:#ff9736};
+
+
+/* footer居底 */
+html,body{
+  height: 100%;
+  margin:0;
+  padding:0;
+}
+.ui-layout {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -45px;/*margin-bottom的负值等于footer高度*/
+}
+.push,
+.ui-footer
+{
+  clear:both;
+  height:45px;
+}
+
+/* 下拉类型 */
+.ui-menu-hd{
+  overflow: hidden;
+  z-index: 102;
+  position: relative;
+  padding: 0 6px;
+  height:18px;
+  line-height:18px;
+  _display: inline;
+  _zoom: 1;
+  a{
+    float: left;
+   
+    margin-right: 5px;
+  }
+}
+
+.ui-menu-bd{
+  z-index: 101;
+  position: relative;
+  display: none;
+  margin-top: -1px;
+  .ui-menu-bd-panel{
+		position: absolute;
+		left: 0;
+		top: 0;
+		padding: 8px;
+		line-height: normal;
+		border: 1px solid #eee;
+		background: #fff;
+	}
+}
+
+.ui-menu-hover{
+	.ui-menu-hd{
+		background-color: #fff;
+		padding:8px 5px 9px 5px;
+		border-width: 0 1px;
+		border-style: solid;
+		border-color: #eee;
+	}
+	.ui-menu-bd{
+		display:block;
+	}
+}
+
+/* table */
+.ui-table{
+  width: 100%;
+  .brow{
+    background-color: #f5f4f4;
+  }
+  
+  th{
+    height: 39px;
+    color: #000;
+    background-color: #dadada;
+    border-bottom: #dcdcdc 1px solid;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  td{
+    border-bottom: #dcdcdc 1px solid;
+  }
+
+  .tal{
+    display:block;
+    text-align: left;
+    padding:0 10px;
+    .text-ellipsis ();
+  }
+
+  .tac{
+    display:block;
+    text-align: center;
+    padding:0 10px;
+    .text-ellipsis ();
+  }
+}
+
+
+/*  公用 css */
+.ui-cont{
+  width: 100%;
+  height: auto;
+  .ui-subcont{
+    width: 1005px;
+    margin: 0 auto;
+  }
+}
+.ui-header{
+  border-top: #8d0d1b 6px solid;
+  height: 118px;
+  .ui-subcont{
+    position: relative;
+  }
+}
+.ui-footer{
+  height: 45px;
+  line-height: 21px;
+  background-color: #8d0d1b;
+  color: #fff;
+  .ui-subcont{
+      padding-top:12px;
+  }
+  a{
+    color: #fff;
+    padding: 0 10px;
+  }
+}
+
+.ui-logo{
+  position: absolute;
+  left: 0;
+  top:20px;
+  width: 236px;
+  height: 80px;
+  background: url('@{urlpath}/logo.png');
+}
+
+.header-cont{
+  height: 118px;
+  margin-left: 250px;
+}
+
+.header-tips{
+  height: 37px;
+  padding-top: 13px;
+  border-bottom: #bdbdbd 1px solid;
+  text-align: right;
+  .phone,
+  .wx,
+  .wb{
+    display: inline-block;
+    vertical-align: top;
+    margin-left:18px;
+    background-repeat:no-repeat;
+    background-position: 0 0;
+  }
+  .wb{
+    width: 25px;
+    height: 25px;
+    background-image: url('@{urlpath}/icon_w.png');
+  }
+  .wx{
+    width: 25px;
+    height: 25px;
+    background-image: url('@{urlpath}/icon_wx.png');
+  }
+  .phone{
+    height: 25px;
+    width: 198px;
+    background-image: url('@{urlpath}/icon_phone.png');
+  }
+}
+
+.nav{
+  overflow: hidden;
+  height:30px;
+  margin-top: 16px;
+  li{
+    float: right;
+    text-align: right;
+    a{
+      display: block;
+      line-height: 30px;
+      padding:0 13px;
+      margin-left:18px;
+      font-size: 16px;
+      color: #333;
+      &:hover,
+      &.current{
+        color:#fff;
+        background-color: #d10b10;
+        .border-radius (@radius:15px);
+        -moz-box-shadow:1px 2px 3px  rgba(0, 0, 0, 0.3) inset;              
+        -webkit-box-shadow:1px 2px 3px  rgba(0, 0, 0, 0.3) inset;           
+        box-shadow:1px 2px 3px rgba(0, 0, 0, 0.3) inset;   
+      }
+    }
+  }
+}
+
+.sublayout{
+  position: relative;
+  padding-bottom:30px;
+  .subtitle{
+      height: 80px;
+      position: relative;
+      border-bottom: #cccccc 1px solid;
+      margin-bottom: 70px;
+      .img{
+        position: absolute;
+        height: 58px;
+        left: 50%;
+        top:48px;
+        background-color: #fff;
+        background-repeat: no-repeat;
+      }
+      .about{
+         width: 262px;
+         margin-left: -131px;
+         background-image: url('@{urlpath}/title_about.png');
+      }
+      .training{
+         width: 362px;
+         margin-left: -181px;
+         background-image: url('@{urlpath}/title_training.png');
+      }
+      .training2{
+         width: 262px;
+         margin-left: -131px;
+         background-image: url('@{urlpath}/title_training2.png');
+      }
+      .culture{
+         width: 262px;
+         margin-left: -131px;
+         background-image: url('@{urlpath}/title_culture.png');
+      }
+      .coach{
+         width: 262px;
+         margin-left: -131px;
+         background-image: url('@{urlpath}/title_coach.png');
+      }
+      .project{
+         width: 262px;
+         margin-left: -131px;
+         background-image: url('@{urlpath}/title_project.png');
+      }
+      .actual{
+         width: 262px;
+         margin-left: -131px;
+         background-image: url('@{urlpath}/title_actual.png');
+      }
+      .system{
+         width: 262px;
+         margin-left: -131px;
+         background-image: url('@{urlpath}/title_system.png');
+      }
+      .registration{
+         width: 262px;
+         margin-left: -131px;
+         background-image: url('@{urlpath}/title_registration.png');
+      }
+
+  }
+  .subnav{
+    position: absolute;
+    width: 130px;
+    right: -145px;
+    top:140px;
+    a{
+      display:block;
+      padding:6px 45px 6px 0;
+      margin-bottom: 6px;
+      text-align: right;
+      position: relative;
+      i{
+        position: absolute;
+        right: 0;
+        top:0;
+        width: 30px;
+        height: 30px;
+        background: url('@{urlpath}/icons.png') no-repeat -32px 0;
+      }
+      &.current{
+        color: #942723;
+        i{
+          background: url('@{urlpath}/icons.png') no-repeat -32px -30px;
+        }
+      }
+    }
+  }
+}

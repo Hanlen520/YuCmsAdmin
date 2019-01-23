@@ -1,0 +1,290 @@
+
+/*
+.btn_likes,
+.btn_comments{
+	display: inline-block;
+	height: 23px;
+	line-height: 23px;
+	padding:0 7px;
+	margin-top: 7px;
+	.border-radius (@radius: 3px);
+	vertical-align: top;
+	
+	i{
+		float: left;
+		width: 15px;
+		height: 20px;
+		margin-right: 8px;
+		margin-top: 2px;
+		.iconH20;
+	}
+
+	&:hover{
+		background-color: #e3f3fe;
+		color: #3d9ee9;
+	}
+
+	&.current{
+		background-color: #fff;
+		color: #3d9ee9;
+	}
+}
+
+.btn_likes{
+	i{background-position: 0 -100px;}
+	&:hover,&.current{i{background-position: 0 -120px;} }
+}
+
+.btn_comments{
+	i{background-position: -15px -100px;}
+	&:hover,&.current{i{background-position: -15px -120px;} }
+}
+*/
+/*.btn_trolley{
+	display: inline-block;
+	height: 23px;
+	line-height: 23px;
+	background-color: #f8b715;
+	color: #fff;
+	padding:0 10px;
+	margin-top: 7px;
+	.border-radius (@radius: 3px);
+	vertical-align: top;
+
+	i{
+		float: left;
+		width: 20px;
+		height: 20px;
+		margin-right: 5px;
+		margin-top: 1px;
+		.iconH20;
+		background-position: 0px -140px;
+	}
+
+	&:hover{
+		background-color: #f88b15;
+		color: #fff;
+	}
+}*/
+
+/*
+.btn-login,
+.btn-regsiter{
+	display: inline-block;
+	width: 125px;
+	color: #fff;
+	padding:8px 0;
+	line-height: 24px;
+	font-size: 16px;
+	text-align: center;
+	.border-radius (@radius: 3px);
+	
+	i{
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		margin-right: 5px;
+		margin-top: 2px;
+		vertical-align: top;
+		.iconH20;
+	}
+
+	&:hover{
+		color:#fff;
+	}
+}
+
+.btn-login{
+	background-color: #f8b715;
+	i{background-position: 0 -160px}
+}
+
+.btn-regsiter{
+	background-color: #9bc626;
+	i{background-position: 0 -180px}
+}
+*/
+/*.rgt1{
+	background-color: #eeeeee;
+	color: #999;
+	i{background-position: 0 -200px}
+	&:hover{
+		color:#999;
+	}
+}*/
+
+
+
+
+/* 提交表单大按钮  */
+.form-validator-btn{
+	display: inline-block;
+	width:105px;
+	height: 42px;
+	line-height: 42px;
+	color: #fff;
+	font-size: 16px;
+	.border-radius (@radius: 3px);
+	vertical-align: top;
+	text-align: center;
+	&:hover{
+		color:#fff;
+	}
+}
+
+/* 选择按钮 小按钮 */
+.from-small-btn{
+	display: inline-block;
+    padding:4px 8px;
+    color: #fff;
+    margin-left: 5px;
+    .border-radius (@radius: 3px);
+    text-align: center;
+    vertical-align: top;
+
+    &:hover{
+      color: #fff;
+    }
+}
+
+/* 按钮配色 */
+.btnColorA{
+	background-color: #ff8400;
+	&:hover{
+		background-color:#ff8400;
+	}
+}
+
+.btnColorB{
+	background-color: #9bc626;
+	&:hover{
+		background-color: #9bc626;
+	} 
+}
+
+.btnColorC{
+	background-color: #5c5bc3;
+	&:hover{
+		background-color:#7574cc;
+	}
+}
+
+.btnColorD{
+	background-color: #e5e5e5;
+	color: #999999;
+	&:hover{
+		background-color:#e5e5e5;
+		color: #999999;
+	}
+}
+
+.btnColorE{
+	background-color: #c00000;
+	&:hover{
+		background-color:#c00000;
+	}
+}
+
+
+/* 渐变色按钮  */
+.btn-medium{
+	display: inline-block;
+	height: 27px;
+	line-height: 27px;
+	padding:0 18px;
+	vertical-align: top;
+	.border-radius (@radius: 3px);
+
+}
+.btn-blue,
+.btn-gray{
+	background-image: url('@{urlpath}/bg_btn_medium.png');
+	background-repeat: repeat-x;
+	.border-radius (@radius: 0px);
+}
+
+.btn-blue{
+	border:#63afed 1px solid;
+	color: #fff;
+	background-position: 0 0;
+	&:hover{
+		color:#fff;
+	}
+}
+
+.btn-gray{
+	border:#c8c8c8 1px solid;
+	color: #555;
+	background-position: 0 -27px;
+	&:hover{
+		color:#555;
+	}
+}
+
+
+/* 删除 修改  绑定 */
+.btn_bound,
+.btn_revamp,
+.btn_del{
+	display: inline-block;
+	padding:0 3px;
+	height: 18px;
+	line-height: 18px;
+	color: #666;
+	vertical-align: middle;
+	i{
+		float: left;
+		background-image: url('@{urlpath}/icons_from.png');
+		background-repeat: no-repeat;
+		width: 20px;
+		height: 18px;
+	}
+
+	&:hover{
+		color:#3d9ee9;
+		text-decoration: none;
+	}
+}
+
+.btn_bound{
+	i{ background-position: -20px -375px;}
+	/*&:hover i{
+		background-position: -20px -375px;
+	}*/
+}
+.btn_revamp{
+	i{ background-position:-20px -395px;}
+	/*&:hover i{
+		background-position: -20px -395px;
+	}*/
+}
+.btn_del{
+	i{ background-position: -20px -415px;}
+	/*&:hover i{
+		background-position: -20px -415px;
+	}*/
+}
+.btn_bound_disable,
+.btn_del_disable,
+.btn_revamp_disable{
+	color: #c8c8c8;
+	cursor:not-allowed;
+	&:hover{
+		color: #c8c8c8;
+	}
+}
+.btn_bound_disable{
+	i{ 
+		background-position:0 -395px;
+	}
+}
+.btn_del_disable{
+	i{ 
+		background-position: 0 -415px;
+	}
+}
+.btn_revamp_disable{
+	i{ 
+		background-position:0 -395px;
+	}
+}

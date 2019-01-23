@@ -1,0 +1,368 @@
+/**
+ * artDialog的LESS预编译文件
+ */
+/* image path */
+/* outer border color and background-color 深黑色 */
+@outBorder:#3f3f3f;
+
+/* inside border color 浅蓝色 */
+@inBorder:#c8c8c8;
+
+/* header,footer位置背景色，默认#ECEEE2*/
+/* title 背景色有调用 */
+.bgColor(@color:#63afed){ background-color:@color;}
+
+/* 按钮背景渐变,默认灰色按钮 */
+.bgGradient(@startColor:#9e9367, @endColor:#9e9367){
+    filter:~'progid:DXImageTransform.Microsoft.gradient(enabled="false", startColorstr=@{startColor}, endColorstr=@{endColor})';
+    background: linear-gradient(top, @startColor, @endColor);
+    background: -moz-linear-gradient(top, @startColor, @endColor);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(@startColor), to(@endColor));
+}
+/* 按钮外观,默认为灰色按钮样式 */
+.bgFace(@color:#fff, @border:solid 1px #9e9367, @bgColor:#9e9367){
+    color:@color;
+    border:@border;
+    background-color:@bgColor;
+}
+
+.opacity(@val:0.5){
+    @val100:@val*100;
+    opacity:@val;
+    filter:~'alpha(opacity=@{val100})';
+    -moz-opacity:@val;
+    -khtml-opacity:@val;
+}
+
+/* 圆角设置,默认2px */
+.borderRadius(@radius:2px){
+    border-radius:@radius;
+    -moz-border-radius:@radius;
+    -webkit-border-radius:@radius;
+}
+
+
+
+/* common start */
+body{
+    _margin:0;
+    _height:100%;
+    /*IE6 BUG*/
+}
+
+.d-title{
+    overflow:hidden;
+    text-overflow: ellipsis;
+    cursor:default;
+    .bgColor;
+    font-size:16px;
+    border:solid 1px @inBorder;
+    color:#fff;
+    height:39px;
+    line-height:39px;
+    padding:0 30px 0 10px;
+}
+.d-state-noTitle .d-title{
+    display:none;
+}
+.d-close{
+    overflow:hidden;
+    display:block;
+    position:absolute;
+    text-decoration:none;
+    outline:none;
+    _cursor:pointer;
+    top:10px;
+    right:5px;
+    width:20px;
+    height:20px;
+    background:url('@{urlpath}/dialog_sprite.png') 0 0 no-repeat;
+    text-indent:-9999em;
+}
+.d-close:hover{
+    text-decoration:none;
+    background-position:0 -20px;
+}
+
+.fn-close{
+    overflow:hidden;
+    display:block;
+    position:absolute;
+    text-decoration:none;
+    outline:none;
+    _cursor:pointer;
+    top:10px;
+    right:5px;
+    width:20px;
+    height:20px;
+    background:url('@{urlpath}/dialog_sprite.png') 0 -40px no-repeat;
+    text-indent:-9999em;
+}
+.fn-close:hover{
+    text-decoration:none;
+    background-position:0 -60px;
+}
+
+.d-main{
+    text-align:center;
+    vertical-align:middle;
+    min-width:9em;
+}
+.d-content{
+    display:~'block\0';
+    display:~'inline-block\9\0';
+    *zoom:1;
+    *display:inline;
+    text-align:left;
+    border:0 none;
+}
+.d-content.d-state-full{
+    display:block;
+    width:100%;
+    margin:0;
+    padding:0!important;
+    height:100%;
+}
+.d-loading {
+    width:auto;
+    height:39px;
+    text-align:left;
+    text-indent:-999em;
+    overflow:hidden;
+    background:url('@{urlpath}/dialog_loading.gif') no-repeat center center;
+}
+.d-buttons {
+    padding:15px 0 20px 0;
+    text-align:center;
+    white-space:nowrap;
+}
+.d-button {
+    overflow:hidden;
+    margin:0 5px;
+    padding: 4px 15px;
+    display: inline-block;
+    min-height:23px;
+    line-height:23px;
+    *line-height:20px;
+    text-align: center;
+    *height:23px;
+    letter-spacing:2px;
+    font-family: ~'Tahoma, Arial/9!important';
+    width:auto;
+    overflow:visible;
+    *width:1;
+    cursor:pointer;
+    .bgFace;
+    /*.bgGradient;*/
+}
+.d-button::-moz-focus-inner, .d-button::-moz-focus-outer {
+    border:0 none;
+    padding:0;
+    margin:0;
+}
+.d-button{
+    &:focus, &:hover{
+        outline:none 0;
+        background-color:#c8b980;
+        /*.bgGradient(#c8b980, #c8b980);*/
+    }
+}
+.d-button[disabled] {
+    cursor:default;
+    filter:alpha(opacity=50); opacity:.5;
+}
+.d-state-highlight {
+    .bgFace(@color:#fff, @border:solid 1px #00c1b9, @bgColor:#00c1b9);
+    /*.bgGradient(#aae32e, #aae32e);*/
+    &:focus{
+        background-color:#00c1b9;
+       /* .bgGradient(#8fc31f, #8fc31f);*/
+    }
+    &:hover{
+        background-color:#00e2d1;
+    /*.bgGradient(#aae32e, #aae32e);*/
+ }
+}
+.d-mask {
+    .bgColor(#000);
+    .opacity;
+}
+/* common end */
+.d-dialog,
+.d-inner{
+  /*  filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#C6FFFFFF', endColorstr='#C6FFFFFF');
+    background:rgba(255,255,255,0.78);*/
+   /* filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#D8FFFFFF', endColorstr='#D8FFFFFF');
+    background:rgba(255,255,255,0.85);*/
+    /*filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#D1FFFFFF', endColorstr='#D1FFFFFF');
+    background:rgba(255,255,255,0.82);*/
+   /* background:url('@{urlpath}/dialog_bg.png') repeat;*/
+   background: none;
+   background: none !important;
+
+}
+.d-nw,
+.d-ne { width:0px; height:0px; }
+
+.d-sw,
+.d-se { width:0px; height:0px; }
+
+.d-nw,
+.d-n,
+.d-ne,
+.d-w,
+.d-e,
+.d-sw,
+.d-s,
+.d-se {
+   /*filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#E5FF6666', endColorstr='#E5FF6666');
+   background:rgba(255,102,102,0.9);*/
+   /*filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#E5E75D9D', endColorstr='#E5E75D9D');
+   background:rgba(231,93,157,0.9);*/
+   background: none;
+   background: none !important;
+}
+.d-titleBar {
+    width:100%;
+    height:0;
+    position:relative;
+    bottom:39px;
+    _bottom:0;
+    _margin-top:-39px;
+}
+.d-state-noTitle .d-nw, .d-state-noTitle .d-ne {
+    height:0px;
+}
+.d-state-noTitle .d-titleBar {
+    bottom:0;
+    _bottom:0;
+    _margin-top:0;
+}
+.d-state-noTitle .d-close {
+    top:1px;
+}
+.d-state-visible {
+    .opacity(0.8);
+}
+.d-state-focus {
+    .opacity(1);
+}
+.d-border{
+    border:0px #ff6666 solid;
+    .borderRadius
+}
+.d-outer table{
+    border-collapse:separate !important;
+    border-collapse:collapse\0;
+    _border-collapse:collapse;
+}
+
+/* IE6 <select> HACK  @tony */
+.d-mask-iframe, .d-outer-iframe{
+    background:#fff;
+    filter:alpha(opacity=0);
+    opacity:0;
+    border:0;
+    overflow:hidden;
+    position:relative;
+    z-index:-1;
+}
+.d-mask-iframe{
+    width:100%;
+    height:100%;
+}
+.d-outer-iframe{
+    width:0;
+    height:0;
+}
+
+/**
+ * @name: 便捷式对话框handy-icon
+ * @overview: 提示信息
+ * @author: josh
+ * 透明弹窗
+ */
+.handy-confrim24{
+    width: 400px;
+    padding: 50px 10px;
+    h5{
+        float: left;
+        padding-left: 5px;
+        line-height: 24px;
+        height: 24px;
+        font-size: 14px;
+        font-weight: 400;
+        overflow: hidden;
+    }
+}
+.handy-confrim32{
+    width: 400px;
+    padding: 45px 10px;
+}
+.handy-confrim32-content{
+    float: left;
+    padding-left: 10px;
+    margin-top: -3px;
+    .confirm-title{
+        font-size: 14px;
+    }
+    .confirm-tips{
+        color: #999;
+    }
+}
+
+/**
+ * @name: handy-tips
+ * @overview: 提示信息
+ * @author: josh
+ * 透明弹窗
+ */
+.handy-tips{
+    height: 64px;
+    overflow: hidden;
+    float: left;
+    width: 100%;
+    p{
+        float: left;
+        padding-left: 5px;
+        line-height: 24px;
+        height: 24px;
+        font-size: 14px;
+        overflow: hidden;
+    }
+}
+
+
+/**
+ * @name: CSS
+ * @overview: 透明弹层样式(没有边框)
+ * @author: josh
+ * 透明弹窗
+ */
+.integral-dialog-outer .d-border{
+    border: 0 none transparent;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+}
+.integral-dialog-outer .d-inner,
+.integral-dialog-outer .d-dialog,
+.integral-dialog-outer .d-nw,
+.integral-dialog-outer .d-n,
+.integral-dialog-outer .d-ne,
+.integral-dialog-outer .d-w,
+.integral-dialog-outer .d-e,
+.integral-dialog-outer .d-sw,
+.integral-dialog-outer .d-s,
+.integral-dialog-outer .d-se{
+    background: none;
+    background: none !important;
+}
+.integral-dialog-outer .d-main{
+    background: none;
+    border: 0;
+}
+
+
+
+

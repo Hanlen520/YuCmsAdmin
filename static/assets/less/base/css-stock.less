@@ -1,0 +1,396 @@
+/*
+  @名称: css-stock
+  @功能: 定义一些常用的样式
+*/
+
+/* 定义通用字体类型 */
+/* 微软雅黑 */
+.ffYH {
+  font-family: "\5FAE\8F6F\96C5\9ED1";
+}
+/* 黑体 */
+.ffHT {
+  font-family: "\9ED1\4F53";
+}
+/* Georgia,用于显示数字 */
+.ffGE {
+  font-family: Georgia;
+}
+
+/* 定义通用字体大小及粗细 */
+.f0 {
+  font-size: 0;
+}
+
+.f11 {
+  font-size: 11px;
+}
+
+.f12 {
+  font-size: 12px;
+}
+
+.f12b {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.f14 {
+  font-size: 14px;
+}
+
+.f14b {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.f16 {
+  font-size: 16px;
+}
+
+.f18 {
+  font-size: 18px;
+}
+
+.f20 {
+  font-size: 20px;
+}
+
+.fwb {
+  font-weight: 700;
+}
+.fwn {
+  font-weight: 400;
+}
+.fsn {
+  font-style: normal;
+}
+
+/* 定义通用内边距尺寸 */
+.fn-p5 {
+  padding: 5px;
+}
+
+.fn-p10 {
+  padding: 10px;
+}
+
+.fn-p15 {
+  padding: 15px;
+}
+
+.fn-p20 {
+  padding: 20px;
+}
+
+.fn-pt5 {
+  padding-top: 5px;
+}
+
+.fn-pt10 {
+  padding-top: 10px;
+}
+
+.fn-pt15 {
+  padding-top: 15px;
+}
+
+.fn-pt20 {
+  padding-top: 20px;
+}
+
+.fn-pb5 {
+  padding-bottom: 5px;
+}
+
+.fn-pb10 {
+  padding-bottom: 10px;
+}
+
+.fn-pb15 {
+  padding-bottom: 15px;
+}
+
+.fn-pb20 {
+  padding-bottom: 20px;
+}
+
+.fn-pb30 {
+  padding-bottom: 30px;
+}
+
+.fn-pl5 {
+  padding-left: 5px;
+}
+
+.fn-pl10 {
+  padding-left: 10px;
+}
+
+.fn-pl15 {
+  padding-left: 15px;
+}
+
+.fn-pl20 {
+  padding-left: 20px;
+}
+
+.fn-pl30 {
+  padding-left: 30px;
+}
+
+.fn-pr5 {
+  padding-right: 5px;
+}
+
+.fn-pr10 {
+  padding-right: 10px;
+}
+
+.fn-pr15 {
+  padding-right: 15px;
+}
+
+.fn-pr20 {
+  padding-right: 20px;
+}
+
+.fn-pr30 {
+  padding-right: 30px;
+}
+
+/* 定义通用外边距尺寸 */
+.fn-mauto{
+  margin-left: auto;
+  margin-right: auto;
+}
+.fn-m5 {
+  margin: 5px;
+}
+
+.fn-m10 {
+  margin: 10px;
+}
+
+.fn-m15 {
+  margin: 15px;
+}
+
+.fn-m20 {
+  margin: 20px;
+}
+
+.fn-mt5 {
+  margin-top: 5px;
+}
+
+.fn-mt10 {
+  margin-top: 10px;
+}
+
+.fn-mt15 {
+  margin-top: 15px;
+}
+
+.fn-mt20 {
+  margin-top: 20px;
+}
+
+.fn-mt30 {
+  margin-top: 30px;
+}
+
+.fn-mb5 {
+  margin-bottom: 5px;
+}
+
+.fn-mb10 {
+  margin-bottom: 10px;
+}
+
+.fn-mb15 {
+  margin-bottom: 15px;
+}
+
+.fn-mb20 {
+  margin-bottom: 20px;
+}
+
+.fn-mb50 {
+  margin-bottom: 50px;
+}
+
+.fn-mb100 {
+  margin-bottom: 100px;
+}
+
+.fn-ml5 {
+  margin-left: 5px;
+}
+
+.fn-ml10 {
+  margin-left: 10px;
+}
+
+.fn-ml15 {
+  margin-left: 15px;
+}
+
+.fn-ml20 {
+  margin-left: 20px;
+}
+
+.fn-mr5 {
+  margin-right: 5px;
+}
+
+.fn-mr10 {
+  margin-right: 10px;
+}
+
+.fn-mr15 {
+  margin-right: 15px;
+}
+
+.fn-mr20 {
+  margin-right: 20px;
+}
+
+
+/* 定义清除浮动的样式 */
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+// .clearfix{
+//   *zoom: 1
+// }
+// .clearfix:after{
+//   content: ".";
+//   display: block;
+//   height: 0;
+//   clear: both;
+//   visibility: hidden
+// }
+
+/* 强制性清除浮动[!慎用] */
+.clr {
+  clear: both;
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+}
+/* 简易版清除浮动 */
+.clear {
+  clear: both;
+}
+
+/* 定义浮动 */
+.fn-left {
+  float: left;
+}
+
+.fn-right {
+  float: right;
+}
+/* Hack IE6 */
+.fn-left, .fn-right {
+  _display: inline;
+}
+
+/* 定义定位 */
+.fn-relative {
+  position: relative;
+}
+
+.fn-absolute {
+  position: absolute;
+}
+
+/* 定义文字显示方式 */
+.fn-tal {
+  text-align: left;
+}
+
+.fn-tac {
+  text-align: center;
+}
+
+.fn-tar {
+  text-align: right;
+}
+
+/* 定义取消字体下划线 */
+.fn-nonline, .fn-nonline:hover, .fn-nonline a:hover {
+  text-decoration: none;
+}
+
+/* 强制换行 */
+.fn-breakall {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+/* 元素居中 */
+.cwrap, 
+.center-wrap {
+  float: left;
+  position: relative;
+  left: 50%;
+  z-index: 100;
+}
+
+.cwrap-content, 
+.center-wrap-content {
+  position: relative;
+  left: -50%;
+  *float: left;
+}
+
+/* 定义隐藏属性，一般用于js */
+.none {
+  display: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+
+/**
+ * object-unsupported 样式模块
+ * 用于显示未安装Flash Player的提示
+ */
+.object-unsupported{
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: #484848;
+    color: #fff;
+}
+.object-unsupported-ctn{
+    background: #484848;
+   /* background: url("../../../base/images/object_unsupported_icon.png") 50% 0 no-repeat #484848;*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -43px;
+    margin-left: -95px;
+    padding-top: 50px;
+    width: 190px;
+    height: 36px;
+    overflow: hidden;
+    text-align: center;
+}
