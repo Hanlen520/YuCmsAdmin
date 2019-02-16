@@ -69,12 +69,12 @@
 		<div class="col-8"> </div>
 	</div>
     <div class="row cl">
-        <?php echo $form->labelEx($modelA,'role',array('class'=>'form-label col-3')); ?>
+        <?php echo $form->labelEx($modelA, 'role',array('class'=>'form-label col-3')); ?>
         <div class="formControls col-4">
 			<select class="select" name="AuthAssignment[role]">
 				<option value ="">--请选择角色--</option>
 				<?php foreach($roles as $val):?>
-				<option value ="<?php echo $val['name']?>" <?php echo $role == $val['name'] ? 'selected' : ''?>><?php echo $val['description']?></option>
+				<option value ="<?php echo $val['name']?>" <?php echo isset($role) && $role == $val['name'] ? 'selected' : ''?>><?php echo $val['description']?></option>
 				<?php endforeach;?>
 			</select>
         <div class="col-8"> </div>

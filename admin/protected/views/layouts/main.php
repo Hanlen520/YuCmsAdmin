@@ -24,14 +24,13 @@
 <title><?php echo CHtml::encode(Yii::app()->name); ?></title>
 </head>
 <body>
-<header class="Hui-header cl"> <a class="Hui-logo l" title="H-ui.admin v2.3" href="/">H-ui.admin</a> <a class="Hui-logo-m l" href="/" title="H-ui.admin">H-ui</a> <span class="Hui-subtitle l">V2.3</span>
+<header class="Hui-header cl"> <a class="Hui-logo l" title="H-ui.admin v2.3" href="/admin//border/index">H-ui.admin</a> <a class="Hui-logo-m l" href="/" title="H-ui.admin">H-ui</a> <span class="Hui-subtitle l">V2.3</span>
 	<nav class="mainnav cl" id="Hui-nav">
 		<ul>
 			<li class="dropDown dropDown_click dropDown_hover"><a href="javascript:;" class="dropDown_A"><i class="Hui-iconfont">&#xe600;</i> 新增 <i class="Hui-iconfont">&#xe6d5;</i></a>
 				<ul class="dropDown-menu radius box-shadow">
-					<li><a href="javascript:;" onclick="article_add('添加资讯','article-add.html')"><i class="Hui-iconfont">&#xe616;</i> 资讯</a></li>
-					<li><a href="javascript:;" onclick="picture_add('添加资讯','picture-add.html')"><i class="Hui-iconfont">&#xe613;</i> 图片</a></li>
-					<li><a href="javascript:;" onclick="product_add('添加资讯','product-add.html')"><i class="Hui-iconfont">&#xe620;</i> 产品</a></li>
+					<li><a href="javascript:;" onclick="article_add('添加设备','article-add.html')"><i class="Hui-iconfont">&#xe616;</i> 资讯</a></li>
+					<li><a href="javascript:;" onclick="picture_add('添加部门','picture-add.html')"><i class="Hui-iconfont">&#xe613;</i> 图片</a></li>
 					<li><a href="javascript:;" onclick="member_add('添加用户','member-add.html','','510')"><i class="Hui-iconfont">&#xe60d;</i> 用户</a></li>
 				</ul>
 			</li>

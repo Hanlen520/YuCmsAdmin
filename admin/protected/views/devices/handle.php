@@ -11,6 +11,8 @@
     <![endif]-->
     <link href="css/H-ui.min.css" rel="stylesheet" type="text/css" />
     <link href="css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+    <link href="lib/Hui-iconfont/1.0.8/iconfont.css" rel="stylesheet" type="text/css" />
+    <link href="css/H-ui.admin.css" rel="stylesheet" type="text/css" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <!--[if IE 6]>
     <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
@@ -25,16 +27,17 @@
         'enableAjaxValidation' => false,
         'htmlOptions'          => array('class'=>'form form-horizontal')
     )); ?>
+
     <div class="row cl">
-        <?php echo $form->labelEx($model,'depart_name',array('class'=>'form-label col-3')); ?>
-        <div class="formControls col-6"><?php echo $form->textField($model,'depart_name', array('class' => 'input-text'));?></div>
-        <div class="col-8"> </div>
+        <?php echo $form->labelEx($model,'old_dev',array('class'=>'form-label col-3')); ?>
+        <div class="formControls col-4"><?php echo $form->DropDownList($model,'old_dev', $model->availableArray, array('empty' => array('' => '请选择'),'class'=>'text-l select-box')); ?></div>
     </div>
     <div class="row cl">
-        <div class="col-8 col-offset-4">
-            <input class="btn btn-primary radius" type="button" url="<?php echo $model->depart_id ? $this->createUrl('department/edit/id/'.$model->depart_id) : $this->createUrl('add')?>"value="&nbsp;&nbsp;保存&nbsp;&nbsp;">
+        <div class="col-offset-4">
+            <input class="btn btn-primary radius" type="button" url="<?php echo $model->id ? $this->createUrl('devices/handle/id/'.$model->id) : $this->createUrl('add')?>"value="&nbsp;&nbsp;保存&nbsp;&nbsp;">
         </div>
     </div>
+
     <?php $this->endWidget(); ?>
 </div>
 <script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script>
@@ -44,7 +47,7 @@
 <script type="text/javascript" src="js/H-ui.admin.js"></script>
 <script>
     $(function(){
-        $('.btn').click(function(){
+        $('.btn-primary').click(function(){
             $.ajax({
                 type:'POST',
                 url: $(this).attr('url'),

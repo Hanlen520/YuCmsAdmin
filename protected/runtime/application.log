@@ -6296,3 +6296,1318 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
+2019/01/25 11:26:17 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.image_list' in 'field list'. The SQL statement executed was: SELECT t.id,t.title,t.content,t.intro,t.cover,t.image_list FROM `t_course` `t` WHERE (t.status=:ycp8) AND (t.catalog_id=:ycp9) ORDER BY t.update_time DESC LIMIT 1.
+in D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\models\Course.php (126)
+in D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\controllers\IndexController.php (21)
+in D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php (16)
+2019/01/25 11:26:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.image_list' in 'field list'. The SQL statement executed was: SELECT t.id,t.title,t.content,t.intro,t.cover,t.image_list FROM `t_course` `t` WHERE (t.status=:ycp8) AND (t.catalog_id=:ycp9) ORDER BY t.update_time DESC LIMIT 1' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\CDbCommand.php:541
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\ar\CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\ar\CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\models\Course.php(126): CActiveRecord->findAll(Object(CDbCriteria))
+#4 D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\controllers\IndexController.php(21): Course->getNew(Array, 1)
+#5 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\actions\CInlineAction.php(49): IndexController->actionIndex()
+#6 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(282): CController->run('')
+#10 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#11 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#13 {main}
+REQUEST_URI=/
+---
+2019/01/25 11:26:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://www.yucms.com/
+---
+2019/01/25 11:26:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/01/25 11:26:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/01/25 11:26:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "amin"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('amin')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/amin
+---
+2019/01/25 11:26:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/01/25 11:26:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "amin"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('amin')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/amin
+---
+2019/01/25 11:26:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/01/25 11:26:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "login"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('login')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/login
+---
+2019/01/25 11:27:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/01/25 11:27:14 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.image_list' in 'field list'. The SQL statement executed was: SELECT t.id,t.title,t.content,t.intro,t.cover,t.image_list FROM `t_course` `t` WHERE (t.status=:ycp8) AND (t.catalog_id=:ycp9) ORDER BY t.update_time DESC LIMIT 1.
+in D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\models\Course.php (126)
+in D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\controllers\IndexController.php (21)
+in D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php (16)
+2019/01/25 11:27:14 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.image_list' in 'field list'. The SQL statement executed was: SELECT t.id,t.title,t.content,t.intro,t.cover,t.image_list FROM `t_course` `t` WHERE (t.status=:ycp8) AND (t.catalog_id=:ycp9) ORDER BY t.update_time DESC LIMIT 1' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\CDbCommand.php:541
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\ar\CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\ar\CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\models\Course.php(126): CActiveRecord->findAll(Object(CDbCriteria))
+#4 D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\controllers\IndexController.php(21): Course->getNew(Array, 1)
+#5 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\actions\CInlineAction.php(49): IndexController->actionIndex()
+#6 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(282): CController->run('')
+#10 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#11 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#13 {main}
+REQUEST_URI=/
+---
+2019/01/25 11:28:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/01/25 11:28:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/01/25 11:28:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/01/25 11:28:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/01/25 11:28:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/01/25 11:28:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/01/25 18:06:28 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.image_list' in 'field list'. The SQL statement executed was: SELECT t.id,t.title,t.content,t.intro,t.cover,t.image_list FROM `t_course` `t` WHERE (t.status=:ycp8) AND (t.catalog_id=:ycp9) ORDER BY t.update_time DESC LIMIT 1.
+in D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\models\Course.php (126)
+in D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\controllers\IndexController.php (21)
+in D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php (16)
+2019/01/25 18:06:28 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.image_list' in 'field list'. The SQL statement executed was: SELECT t.id,t.title,t.content,t.intro,t.cover,t.image_list FROM `t_course` `t` WHERE (t.status=:ycp8) AND (t.catalog_id=:ycp9) ORDER BY t.update_time DESC LIMIT 1' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\CDbCommand.php:541
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\ar\CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\ar\CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\models\Course.php(126): CActiveRecord->findAll(Object(CDbCriteria))
+#4 D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\controllers\IndexController.php(21): Course->getNew(Array, 1)
+#5 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\actions\CInlineAction.php(49): IndexController->actionIndex()
+#6 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(282): CController->run('')
+#10 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#11 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#13 {main}
+REQUEST_URI=/
+HTTP_REFERER=http://www.yucms.com/admin//border/index
+---
+2019/01/25 18:10:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/01/25 18:10:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/01/25 18:10:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/01/25 18:10:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/01/25 18:10:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/01/25 18:10:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/01/25 18:10:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/01/25 18:10:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/01/25 18:10:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/01/25 18:10:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/01/25 18:10:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/01/25 18:10:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/01/25 18:10:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/01/25 18:10:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/01/25 18:10:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/01/25 18:11:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/01/25 18:11:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/01/25 18:11:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/01/25 18:11:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/01/25 18:11:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/01/25 18:11:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/01/29 09:56:40 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.image_list' in 'field list'. The SQL statement executed was: SELECT t.id,t.title,t.content,t.intro,t.cover,t.image_list FROM `t_course` `t` WHERE (t.status=:ycp8) AND (t.catalog_id=:ycp9) ORDER BY t.update_time DESC LIMIT 1.
+in D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\models\Course.php (126)
+in D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\controllers\IndexController.php (21)
+in D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php (16)
+2019/01/29 09:56:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.image_list' in 'field list'. The SQL statement executed was: SELECT t.id,t.title,t.content,t.intro,t.cover,t.image_list FROM `t_course` `t` WHERE (t.status=:ycp8) AND (t.catalog_id=:ycp9) ORDER BY t.update_time DESC LIMIT 1' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\CDbCommand.php:541
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\ar\CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\ar\CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\models\Course.php(126): CActiveRecord->findAll(Object(CDbCriteria))
+#4 D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\controllers\IndexController.php(21): Course->getNew(Array, 1)
+#5 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\actions\CInlineAction.php(49): IndexController->actionIndex()
+#6 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(282): CController->run('')
+#10 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#11 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#13 {main}
+REQUEST_URI=/
+---
+2019/01/29 09:56:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://www.yucms.com/
+---
+2019/01/29 09:56:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/01/29 09:56:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/01/29 11:05:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://www.yucms.com/admin//border/index
+---
+2019/01/29 16:18:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://www.yucms.com/admin//border/index
+---
+2019/01/29 17:15:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/14 09:39:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/14 09:39:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://www.yucms.com/admin/login/login
+---
+2019/02/14 09:39:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/14 09:47:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/14 09:47:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/14 09:47:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/14 09:47:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/14 09:47:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/14 09:47:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/14 09:50:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/14 09:50:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/14 09:50:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/14 09:50:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/14 09:50:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/14 09:50:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/14 09:50:47 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.image_list' in 'field list'. The SQL statement executed was: SELECT t.id,t.title,t.content,t.intro,t.cover,t.image_list FROM `t_course` `t` WHERE (t.status=:ycp8) AND (t.catalog_id=:ycp9) ORDER BY t.update_time DESC LIMIT 1.
+in D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\models\Course.php (126)
+in D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\controllers\IndexController.php (21)
+in D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php (16)
+2019/02/14 09:50:47 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.image_list' in 'field list'. The SQL statement executed was: SELECT t.id,t.title,t.content,t.intro,t.cover,t.image_list FROM `t_course` `t` WHERE (t.status=:ycp8) AND (t.catalog_id=:ycp9) ORDER BY t.update_time DESC LIMIT 1' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\CDbCommand.php:541
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\ar\CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\ar\CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\models\Course.php(126): CActiveRecord->findAll(Object(CDbCriteria))
+#4 D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\controllers\IndexController.php(21): Course->getNew(Array, 1)
+#5 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\actions\CInlineAction.php(49): IndexController->actionIndex()
+#6 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(282): CController->run('')
+#10 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#11 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#13 {main}
+REQUEST_URI=/
+---
+2019/02/14 09:50:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/14 09:50:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/14 09:50:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/14 09:50:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/14 09:50:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/14 09:50:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/14 09:50:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/14 09:54:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/14 09:54:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/14 09:55:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/14 09:59:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/14 10:04:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/14 10:19:19 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.image_list' in 'field list'. The SQL statement executed was: SELECT t.id,t.title,t.content,t.intro,t.cover,t.image_list FROM `t_course` `t` WHERE (t.status=:ycp8) AND (t.catalog_id=:ycp9) ORDER BY t.update_time DESC LIMIT 1.
+in D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\models\Course.php (126)
+in D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\controllers\IndexController.php (21)
+in D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php (16)
+2019/02/14 10:19:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.image_list' in 'field list'. The SQL statement executed was: SELECT t.id,t.title,t.content,t.intro,t.cover,t.image_list FROM `t_course` `t` WHERE (t.status=:ycp8) AND (t.catalog_id=:ycp9) ORDER BY t.update_time DESC LIMIT 1' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\CDbCommand.php:541
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\ar\CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\ar\CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\models\Course.php(126): CActiveRecord->findAll(Object(CDbCriteria))
+#4 D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\controllers\IndexController.php(21): Course->getNew(Array, 1)
+#5 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\actions\CInlineAction.php(49): IndexController->actionIndex()
+#6 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(282): CController->run('')
+#10 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#11 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#13 {main}
+REQUEST_URI=/
+HTTP_REFERER=http://www.yucms.com/admin//border/index
+---
+2019/02/14 10:19:23 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.image_list' in 'field list'. The SQL statement executed was: SELECT t.id,t.title,t.content,t.intro,t.cover,t.image_list FROM `t_course` `t` WHERE (t.status=:ycp8) AND (t.catalog_id=:ycp9) ORDER BY t.update_time DESC LIMIT 1.
+in D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\models\Course.php (126)
+in D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\controllers\IndexController.php (21)
+in D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php (16)
+2019/02/14 10:19:23 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.image_list' in 'field list'. The SQL statement executed was: SELECT t.id,t.title,t.content,t.intro,t.cover,t.image_list FROM `t_course` `t` WHERE (t.status=:ycp8) AND (t.catalog_id=:ycp9) ORDER BY t.update_time DESC LIMIT 1' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\CDbCommand.php:541
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\ar\CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\ar\CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\models\Course.php(126): CActiveRecord->findAll(Object(CDbCriteria))
+#4 D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\controllers\IndexController.php(21): Course->getNew(Array, 1)
+#5 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\actions\CInlineAction.php(49): IndexController->actionIndex()
+#6 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(282): CController->run('')
+#10 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#11 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#13 {main}
+REQUEST_URI=/
+---
+2019/02/14 15:54:20 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.image_list' in 'field list'. The SQL statement executed was: SELECT t.id,t.title,t.content,t.intro,t.cover,t.image_list FROM `t_course` `t` WHERE (t.status=:ycp8) AND (t.catalog_id=:ycp9) ORDER BY t.update_time DESC LIMIT 1.
+in D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\models\Course.php (126)
+in D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\controllers\IndexController.php (21)
+in D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php (16)
+2019/02/14 15:54:20 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.image_list' in 'field list'. The SQL statement executed was: SELECT t.id,t.title,t.content,t.intro,t.cover,t.image_list FROM `t_course` `t` WHERE (t.status=:ycp8) AND (t.catalog_id=:ycp9) ORDER BY t.update_time DESC LIMIT 1' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\CDbCommand.php:541
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\ar\CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\ar\CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\models\Course.php(126): CActiveRecord->findAll(Object(CDbCriteria))
+#4 D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\controllers\IndexController.php(21): Course->getNew(Array, 1)
+#5 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\actions\CInlineAction.php(49): IndexController->actionIndex()
+#6 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(282): CController->run('')
+#10 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#11 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#13 {main}
+REQUEST_URI=/
+---
+2019/02/14 15:54:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://www.yucms.com/
+---
+2019/02/14 15:54:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/14 15:54:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/15 10:22:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/15 10:22:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/15 15:38:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/15 16:36:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 09:42:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 09:42:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 09:46:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 09:46:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 10:01:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://www.yucms.com/admin//border/index
+---
+2019/02/16 10:02:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 10:02:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 10:02:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 10:09:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 10:09:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 10:09:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 10:11:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 10:11:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 11:07:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 11:07:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 11:07:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 11:07:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 11:07:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 11:07:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 11:07:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 11:07:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 11:07:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 11:07:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 11:07:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 11:07:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 11:09:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://www.yucms.com/admin//border/index
+---
+2019/02/16 13:43:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 13:43:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 13:43:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 13:43:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 13:43:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 13:43:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 13:43:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 13:45:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 13:45:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 13:45:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 13:45:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 13:45:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 13:48:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 13:48:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 13:48:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 13:48:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 13:52:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 13:52:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 13:53:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://www.yucms.com/admin//border/index
+---
+2019/02/16 13:53:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://www.yucms.com/admin//border/index
+---
+2019/02/16 13:53:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://www.yucms.com/admin//border/index
+---
+2019/02/16 14:02:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 14:02:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 14:02:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 14:02:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 14:02:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 14:02:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 14:02:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 14:02:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 14:02:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 14:02:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 14:54:42 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.image_list' in 'field list'. The SQL statement executed was: SELECT t.id,t.title,t.content,t.intro,t.cover,t.image_list FROM `t_course` `t` WHERE (t.status=:ycp8) AND (t.catalog_id=:ycp9) ORDER BY t.update_time DESC LIMIT 1.
+in D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\models\Course.php (126)
+in D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\controllers\IndexController.php (21)
+in D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php (16)
+2019/02/16 14:54:42 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.image_list' in 'field list'. The SQL statement executed was: SELECT t.id,t.title,t.content,t.intro,t.cover,t.image_list FROM `t_course` `t` WHERE (t.status=:ycp8) AND (t.catalog_id=:ycp9) ORDER BY t.update_time DESC LIMIT 1' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\CDbCommand.php:541
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\ar\CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\ar\CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\models\Course.php(126): CActiveRecord->findAll(Object(CDbCriteria))
+#4 D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\controllers\IndexController.php(21): Course->getNew(Array, 1)
+#5 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\actions\CInlineAction.php(49): IndexController->actionIndex()
+#6 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(282): CController->run('')
+#10 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#11 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#13 {main}
+REQUEST_URI=/
+HTTP_REFERER=http://www.yucms.com/admin//border/index
+---
+2019/02/16 17:07:31 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.image_list' in 'field list'. The SQL statement executed was: SELECT t.id,t.title,t.content,t.intro,t.cover,t.image_list FROM `t_course` `t` WHERE (t.status=:ycp8) AND (t.catalog_id=:ycp9) ORDER BY t.update_time DESC LIMIT 1.
+in D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\models\Course.php (126)
+in D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\controllers\IndexController.php (21)
+in D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php (16)
+2019/02/16 17:07:31 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.image_list' in 'field list'. The SQL statement executed was: SELECT t.id,t.title,t.content,t.intro,t.cover,t.image_list FROM `t_course` `t` WHERE (t.status=:ycp8) AND (t.catalog_id=:ycp9) ORDER BY t.update_time DESC LIMIT 1' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\CDbCommand.php:541
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\ar\CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\db\ar\CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\models\Course.php(126): CActiveRecord->findAll(Object(CDbCriteria))
+#4 D:\phpStudy\PHPTutorial\WWW\YuCMS\protected\controllers\IndexController.php(21): Course->getNew(Array, 1)
+#5 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\actions\CInlineAction.php(49): IndexController->actionIndex()
+#6 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(282): CController->run('')
+#10 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#11 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#13 {main}
+REQUEST_URI=/
+HTTP_REFERER=http://www.yucms.com/admin//border/index
+---
+2019/02/16 17:08:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2019/02/16 17:09:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\phpStudy\PHPTutorial\WWW\YuCMS\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\phpStudy\PHPTutorial\WWW\YuCMS\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---

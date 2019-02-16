@@ -2,15 +2,15 @@
 Navicat MySQL Data Transfer
 
 Source Server         : localhost
-Source Server Version : 50540
-Source Host           : localhost:3306
+Source Server Version : 50553
+Source Host           : 127.0.0.1:3306
 Source Database       : yucms
 
 Target Server Type    : MYSQL
-Target Server Version : 50540
+Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2015-12-01 00:01:22
+Date: 2019-02-16 17:14:19
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -31,6 +31,7 @@ CREATE TABLE `authassignment` (
 -- ----------------------------
 -- Records of authassignment
 -- ----------------------------
+INSERT INTO `authassignment` VALUES ('testerROLE', '27', null, null);
 
 -- ----------------------------
 -- Table structure for authitem
@@ -54,6 +55,14 @@ INSERT INTO `authitem` VALUES ('DepartmentAdd', 'department/add', '0', '添加�
 INSERT INTO `authitem` VALUES ('DepartmentDelete', 'department/delete', '0', '删除部门', null, null, '0');
 INSERT INTO `authitem` VALUES ('DepartmentEdit', 'department/edit', '0', '编辑部门', null, null, '0');
 INSERT INTO `authitem` VALUES ('DepartmentIndex', 'department/index', '0', '部门列表', null, null, '0');
+INSERT INTO `authitem` VALUES ('DevicesAdd', 'devices/add', '0', '设备添加', null, null, '0');
+INSERT INTO `authitem` VALUES ('DevicesCheck', 'devices/check', '0', '设备盘点', null, null, '0');
+INSERT INTO `authitem` VALUES ('DevicesDelete', 'devices/delete', '0', '设备删除', null, null, '0');
+INSERT INTO `authitem` VALUES ('DevicesEdit', 'devices/edit', '0', '设备编辑', null, null, '0');
+INSERT INTO `authitem` VALUES ('DevicesIndex', 'devices/index', '0', '设备申请', null, null, '0');
+INSERT INTO `authitem` VALUES ('DevicesList', 'devices/list', '0', '设备列表', null, null, '0');
+INSERT INTO `authitem` VALUES ('DevicesSetstate', 'devices/setstate', '0', '设备申请', null, null, '0');
+INSERT INTO `authitem` VALUES ('DevicesSetstatus', 'devices/setstatus', '0', '设备操作', null, null, '0');
 INSERT INTO `authitem` VALUES ('IndexEditpass', 'index/editpass', '0', '修改密码', null, null, '0');
 INSERT INTO `authitem` VALUES ('IndexIndex', 'index/index', '0', '首页', null, null, '0');
 INSERT INTO `authitem` VALUES ('ItemAdd', 'item/add', '0', '新增权限', null, null, '0');
@@ -150,7 +159,7 @@ CREATE TABLE `t_admin_log` (
   PRIMARY KEY (`log_id`),
   KEY `admin_user_id` (`admin_user_id`),
   KEY `controller_name` (`controller_name`,`action_name`)
-) ENGINE=MyISAM AUTO_INCREMENT=687 DEFAULT CHARSET=utf8 COMMENT='系统日志表';
+) ENGINE=MyISAM AUTO_INCREMENT=774 DEFAULT CHARSET=utf8 COMMENT='系统日志表';
 
 -- ----------------------------
 -- Records of t_admin_log
@@ -341,6 +350,93 @@ INSERT INTO `t_admin_log` VALUES ('683', '', 'menu', 'add', 'admin/menu/add', '1
 INSERT INTO `t_admin_log` VALUES ('684', '', 'role', 'edit', 'admin/role/edit/name/testerROLE', '127.0.0.1', '1', 'admin', '1448897274', '编辑角色[testerROLE]', '编辑角色：角色代码为[testerROLE]，角色描述更改为[测试]');
 INSERT INTO `t_admin_log` VALUES ('685', '', 'role', 'add', 'admin/role/add', '127.0.0.1', '1', 'admin', '1448897296', '新增角色[bianjiROLE]', '新增角色：角色代码为[bianjiROLE]，角色描述为[编辑人员]');
 INSERT INTO `t_admin_log` VALUES ('686', '', 'role', 'delete', 'admin/role/delete?name=bianjiROLE', '127.0.0.1', '1', 'admin', '1448897656', '删除角色[bianjiROLE]', '删除角色：角色代码为[bianjiROLE]，角色描述为[编辑人员]');
+INSERT INTO `t_admin_log` VALUES ('687', '', 'department', 'edit', 'admin/department/edit/id/1', '127.0.0.1', '1', 'admin', '1548387007', '编辑部门', '部门名称 由 [客服部] 修改为 [前端组]');
+INSERT INTO `t_admin_log` VALUES ('688', '', 'department', 'edit', 'admin/department/edit/id/7', '127.0.0.1', '1', 'admin', '1548387026', '编辑部门', '部门名称 由 [综合部] 修改为 [JAve、]');
+INSERT INTO `t_admin_log` VALUES ('689', '', 'department', 'edit', 'admin/department/edit/id/7', '127.0.0.1', '1', 'admin', '1548387035', '编辑部门', '部门名称 由 [JAve、] 修改为 [Java]');
+INSERT INTO `t_admin_log` VALUES ('690', '', 'department', 'edit', 'admin/department/edit/id/7', '127.0.0.1', '1', 'admin', '1548387047', '编辑部门', '部门名称 由 [Java] 修改为 [Java组]');
+INSERT INTO `t_admin_log` VALUES ('691', '', 'department', 'edit', 'admin/department/edit/id/2', '127.0.0.1', '1', 'admin', '1548387074', '编辑部门', '部门名称 由 [市场部] 修改为 [App组]');
+INSERT INTO `t_admin_log` VALUES ('692', '', 'department', 'edit', 'admin/department/edit/id/3', '127.0.0.1', '1', 'admin', '1548387087', '编辑部门', '部门名称 由 [技术部] 修改为 [测试组]');
+INSERT INTO `t_admin_log` VALUES ('693', '', 'department', 'add', 'admin/department/add', '127.0.0.1', '1', 'admin', '1548387096', '新增部门[设计组]', '新增部门[设计组]');
+INSERT INTO `t_admin_log` VALUES ('694', '', 'department', 'add', 'admin/department/add', '127.0.0.1', '1', 'admin', '1548387106', '新增部门[产品组]', '新增部门[产品组]');
+INSERT INTO `t_admin_log` VALUES ('695', '', 'item', 'add', 'admin/item/add/name/DevicesController', '127.0.0.1', '1', 'admin', '1548403448', '控制器授权[DevicesController]', '控制器授权：模块为[]，控制器为[DevicesController]，方法为[DevicesIndex]');
+INSERT INTO `t_admin_log` VALUES ('696', '', 'menu', 'add', 'admin/menu/add', '127.0.0.1', '1', 'admin', '1548403461', '新增菜单[设备管理]', '新增菜单[设备管理]');
+INSERT INTO `t_admin_log` VALUES ('697', '', 'menu', 'add', 'admin/menu/add', '127.0.0.1', '1', 'admin', '1548403486', '新增菜单[设备管理]', '新增菜单[设备管理]');
+INSERT INTO `t_admin_log` VALUES ('698', '', 'item', 'update', 'admin/item/update/name/DevicesController', '127.0.0.1', '1', 'admin', '1548403563', '更新授权描述[DevicesController]', '更新授权描述[DevicesController]');
+INSERT INTO `t_admin_log` VALUES ('699', '', 'menu', 'update', 'admin/menu/update', '127.0.0.1', '1', 'admin', '1548411096', '更新菜单排序', '更新菜单排序');
+INSERT INTO `t_admin_log` VALUES ('700', '', 'devices', 'setstate', 'admin/devices/setstate?id=3&status=0', '127.0.0.1', '1', 'admin', '1548740823', '设备[华为荣耀7i]', '设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('701', '', 'devices', 'setstate', 'admin/devices/setstate?id=3&status=0', '127.0.0.1', '1', 'admin', '1548742109', '设备[华为荣耀7i]', '设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('702', '', 'devices', 'setstate', 'admin/devices/setstate?id=3&status=1', '127.0.0.1', '1', 'admin', '1548742222', '申请设备[华为荣耀7i]', '申请设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('703', '', 'devices', 'setstate', 'admin/devices/setstate?id=3&status=1', '127.0.0.1', '1', 'admin', '1548742265', '申请设备[华为荣耀7i]', '申请设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('704', '', 'devices', 'setstate', 'admin/devices/setstate?id=3&status=1', '127.0.0.1', '1', 'admin', '1548742283', '申请设备[华为荣耀7i]', '申请设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('705', '', 'devices', 'setstate', 'admin/devices/setstate?id=3&status=1', '127.0.0.1', '1', 'admin', '1548742780', '申请设备[华为荣耀7i]', '申请设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('706', '', 'devices', 'setstate', 'admin/devices/setstate?id=3&status=1', '127.0.0.1', '1', 'admin', '1548742792', '申请设备[华为荣耀7i]', '申请设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('707', '', 'devices', 'setstate', 'admin/devices/setstate?id=3&status=1', '127.0.0.1', '1', 'admin', '1548744293', '申请设备[华为荣耀7i]', '申请设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('708', '', 'devices', 'setstate', 'admin/devices/setstate?id=3&status=1', '127.0.0.1', '1', 'admin', '1548745543', '申请设备[华为荣耀7i]', '申请设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('709', '', 'devices', 'setstate', 'admin/devices/setstate?id=3&status=0', '127.0.0.1', '1', 'admin', '1548745581', '设备[华为荣耀7i]', '设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('710', '', 'devices', 'setstate', 'admin/devices/setstate?id=3&status=1', '127.0.0.1', '1', 'admin', '1548745634', '申请设备[华为荣耀7i]', '申请设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('711', '', 'devices', 'setstate', 'admin/devices/setstate?id=3&status=0', '127.0.0.1', '1', 'admin', '1548745649', '设备[华为荣耀7i]', '设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('712', '', 'devices', 'setstate', 'admin/devices/setstate?id=3&status=1', '127.0.0.1', '1', 'admin', '1548748789', '申请设备[华为荣耀7i]', '申请设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('713', '', 'devices', 'setstate', 'admin/devices/setstate?id=3&status=1&borrower=%E7%8E%8B%E7%AB%8B%E7%BE%8A', '127.0.0.1', '1', 'admin', '1548748845', '申请设备[华为荣耀7i]', '申请设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('714', '', 'devices', 'setstate', 'admin/devices/setstate?id=3&status=0&borrower=%E7%8E%8B%E7%AB%8B%E7%BE%8A', '127.0.0.1', '1', 'admin', '1548748856', '取消申请设备[华为荣耀7i]', '取消申请设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('715', '', 'devices', 'setstate', 'admin/devices/setstate?id=3&status=1&borrower=', '127.0.0.1', '1', 'admin', '1548749143', '申请设备[华为荣耀7i]', '申请设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('716', '', 'devices', 'setstate', 'admin/devices/setstate?id=3&status=0&borrower=', '127.0.0.1', '1', 'admin', '1548749148', '取消申请设备[华为荣耀7i]', '取消申请设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('717', '', 'devices', 'setstate', 'admin/devices/setstate?id=3&status=1&borrower=', '127.0.0.1', '1', 'admin', '1548749163', '申请设备[华为荣耀7i]', '申请设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('718', '', 'devices', 'setstate', 'admin/devices/setstate?id=3&status=0&borrower=', '127.0.0.1', '1', 'admin', '1548749168', '取消申请设备[华为荣耀7i]', '取消申请设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('719', '', 'devices', 'setstate', 'admin/devices/setstate?id=3&status=1&borrower=', '127.0.0.1', '1', 'admin', '1548749275', '申请设备[华为荣耀7i]', '申请设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('720', '', 'devices', 'setstate', 'admin/devices/setstate?id=3&status=0&borrower=', '127.0.0.1', '1', 'admin', '1548749306', '取消申请设备[华为荣耀7i]', '取消申请设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('721', '', 'devices', 'setstate', 'admin/devices/setstate?id=3&status=1&borrower=', '127.0.0.1', '1', 'admin', '1548749640', '申请设备[华为荣耀7i]', '申请设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('722', '', 'devices', 'setstate', 'admin/devices/setstate?id=3&status=0&borrower=', '127.0.0.1', '1', 'admin', '1548749645', '取消申请设备[华为荣耀7i]', '取消申请设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('723', '', 'devices', 'setstate', 'admin/devices/setstate?id=3&status=1&borrower=', '127.0.0.1', '1', 'admin', '1548749896', '申请设备[华为荣耀7i]', '申请设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('724', '', 'devices', 'setstate', 'admin/devices/setstate?id=3&status=0&borrower=', '127.0.0.1', '1', 'admin', '1548750006', '取消申请设备[华为荣耀7i]', '取消申请设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('725', '', 'devices', 'setstate', 'admin/devices/setstate?id=3&status=1&borrower=%E7%8E%8B%E7%AB%8B%E6%A0%B7', '127.0.0.1', '1', 'admin', '1548750871', '申请设备[华为荣耀7i]', '申请设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('726', '', 'devices', 'setstate', 'admin/devices/setstate?id=3&status=0&borrower=%E7%8E%8B%E7%AB%8B%E6%A0%B7', '127.0.0.1', '1', 'admin', '1548750876', '取消申请设备[华为荣耀7i]', '取消申请设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('727', '', 'menu', 'edit', 'admin/menu/edit/id/112', '127.0.0.1', '1', 'admin', '1550109862', '编辑菜单', '菜单名称 由 [设备管理] 修改为 [设备申请]');
+INSERT INTO `t_admin_log` VALUES ('728', '', 'item', 'update', 'admin/item/update/name/DevicesController', '127.0.0.1', '1', 'admin', '1550198054', '更新授权描述[DevicesController]', '更新授权描述[DevicesController]');
+INSERT INTO `t_admin_log` VALUES ('729', '', 'item', 'add', 'admin/item/add/name/DevicesController', '127.0.0.1', '1', 'admin', '1550198066', '控制器授权[DevicesController]', '控制器授权：模块为[]，控制器为[DevicesController]，方法为[DevicesList]');
+INSERT INTO `t_admin_log` VALUES ('730', '', 'menu', 'add', 'admin/menu/add', '127.0.0.1', '1', 'admin', '1550198107', '新增菜单[管理设备]', '新增菜单[管理设备]');
+INSERT INTO `t_admin_log` VALUES ('731', '', 'menu', 'update', 'admin/menu/update', '127.0.0.1', '1', 'admin', '1550198143', '更新菜单排序', '更新菜单排序');
+INSERT INTO `t_admin_log` VALUES ('732', '', 'devices', 'setstate', 'admin/devices/setstate?id=3&status=1&borrower=%E7%8E%8B%E7%AB%8B%E7%BE%8A', '127.0.0.1', '1', 'admin', '1550199692', '申请设备[华为荣耀7i]', '申请设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('733', '', 'devices', 'delete', 'admin/devices/delete?id=4', '127.0.0.1', '1', 'admin', '1550214021', '删除设备[oppo R7s]', '删除设备[oppo R7s]');
+INSERT INTO `t_admin_log` VALUES ('734', '', 'devices', 'delete', 'admin/devices/delete?id=4', '127.0.0.1', '1', 'admin', '1550214083', '删除设备[oppo R7s]', '删除设备[oppo R7s]');
+INSERT INTO `t_admin_log` VALUES ('735', '', 'devices', 'setstatus', 'admin/devices/setstatus?id=3&status=2&borrower=%E7%8E%8B%E7%AB%8B%E7%BE%8A', '127.0.0.1', '1', 'admin', '1550214918', '借出设备[华为荣耀7i]', '借出设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('736', '', 'devices', 'setstatus', 'admin/devices/setstatus?id=3&status=0&borrower=%E7%8E%8B%E7%AB%8B%E7%BE%8A', '127.0.0.1', '1', 'admin', '1550214935', '归还设备[华为荣耀7i]', '归还设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('737', '', 'devices', 'setstate', 'admin/devices/setstate?id=3&status=1&borrower=%E7%8E%8B%E7%AB%8B%E7%BE%8A', '127.0.0.1', '1', 'admin', '1550216234', '申请设备[华为荣耀7i]', '申请设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('738', '', 'devices', 'setstatus', 'admin/devices/setstatus?id=3&status=2&borrower=%E7%8E%8B%E7%AB%8B%E7%BE%8A', '127.0.0.1', '1', 'admin', '1550216243', '借出设备[华为荣耀7i]', '借出设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('739', '', 'devices', 'setstatus', 'admin/devices/setstatus?id=3&status=0&borrower=%E7%8E%8B%E7%AB%8B%E7%BE%8A', '127.0.0.1', '1', 'admin', '1550216736', '归还设备[华为荣耀7i]', '归还设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('740', '', 'devices', 'setstatus', 'admin/devices/setstatus?id=3&status=2&borrower=%E5%90%B4%E9%80%89%E5%89%91', '127.0.0.1', '1', 'admin', '1550216760', '借出设备[华为荣耀7i]', '借出设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('741', '', 'devices', 'setstatus', 'admin/devices/setstatus?id=3&status=0&borrower=%E5%90%B4%E9%80%89%E5%89%91', '127.0.0.1', '1', 'admin', '1550216767', '归还设备[华为荣耀7i]', '归还设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('742', '', 'devices', 'setstate', 'admin/devices/setstate?id=3&status=1&borrower=%E7%8E%8B%E7%AB%8B%E7%BE%8A', '127.0.0.1', '1', 'admin', '1550217121', '申请设备[华为荣耀7i]', '申请设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('743', '', 'user', 'edit', 'admin/user/edit/id/27', '127.0.0.1', '1', 'admin', '1550220470', '编辑用户[tester]', '未更改任何值');
+INSERT INTO `t_admin_log` VALUES ('744', '', 'user', 'edit', 'admin/user/edit/id/27', '127.0.0.1', '1', 'admin', '1550220486', '编辑用户[tester]', '未更改任何值');
+INSERT INTO `t_admin_log` VALUES ('745', '', 'devices', 'add', 'admin/devices/add', '127.0.0.1', '1', 'admin', '1550288693', '新增设备[iphone6]', '新增设备[iphone6]');
+INSERT INTO `t_admin_log` VALUES ('746', '', 'devices', 'add', 'admin/devices/add', '127.0.0.1', '1', 'admin', '1550296497', '新增设备[iPhone X]', '新增设备[iPhone X]');
+INSERT INTO `t_admin_log` VALUES ('747', '', 'devices', 'add', 'admin/devices/add', '127.0.0.1', '1', 'admin', '1550296558', '新增设备[iPhone5]', '新增设备[iPhone5]');
+INSERT INTO `t_admin_log` VALUES ('748', '', 'department', 'add', 'admin/department/add', '127.0.0.1', '1', 'admin', '1550296605', '新增部门[运营组]', '新增部门[运营组]');
+INSERT INTO `t_admin_log` VALUES ('749', '', 'devices', 'add', 'admin/devices/add', '127.0.0.1', '1', 'admin', '1550296861', '新增设备[iPhone7]', '新增设备[iPhone7]');
+INSERT INTO `t_admin_log` VALUES ('750', '', 'devices', 'add', 'admin/devices/add', '127.0.0.1', '1', 'admin', '1550297211', '新增设备[vivo x7]', '新增设备[vivo x7]');
+INSERT INTO `t_admin_log` VALUES ('751', '', 'devices', 'add', 'admin/devices/add', '127.0.0.1', '1', 'admin', '1550297864', '新增设备[红米5]', '新增设备[红米5]');
+INSERT INTO `t_admin_log` VALUES ('752', '', 'devices', 'edit', 'admin/devices/edit/id/3', '127.0.0.1', '1', 'admin', '1550298867', '编辑设备', '未更改任何值');
+INSERT INTO `t_admin_log` VALUES ('753', '', 'devices', 'edit', 'admin/devices/edit/id/10', '127.0.0.1', '1', 'admin', '1550298883', '编辑设备', '所属人 由 [] 修改为 [宋子荣]');
+INSERT INTO `t_admin_log` VALUES ('754', '', 'devices', 'edit', 'admin/devices/edit/id/1', '127.0.0.1', '1', 'admin', '1550299038', '编辑设备', '未更改任何值');
+INSERT INTO `t_admin_log` VALUES ('755', '', 'item', 'add', 'admin/item/add/name/DevicesController', '127.0.0.1', '1', 'admin', '1550300032', '控制器授权[DevicesController]', '控制器授权：模块为[]，控制器为[DevicesController]，方法为[DevicesAdd、DevicesCheck、DevicesDelete、DevicesEdit、DevicesSetstate、DevicesSetstatus]');
+INSERT INTO `t_admin_log` VALUES ('756', '', 'menu', 'add', 'admin/menu/add', '127.0.0.1', '1', 'admin', '1550300052', '新增菜单[设备盘点]', '新增菜单[设备盘点]');
+INSERT INTO `t_admin_log` VALUES ('757', '', 'menu', 'update', 'admin/menu/update', '127.0.0.1', '1', 'admin', '1550300074', '更新菜单排序', '更新菜单排序');
+INSERT INTO `t_admin_log` VALUES ('758', '', 'devices', 'reset', 'admin/devices/reset?id=10', '127.0.0.1', '1', 'admin', '1550302616', '重置设备[红米5]', '重置设备[红米5]');
+INSERT INTO `t_admin_log` VALUES ('759', '', 'devices', 'handle', 'admin/devices/handle/id/1', '127.0.0.1', '1', 'admin', '1550304662', '盘点设备', '所属人 由 [余志杰] 修改为 []、借阅人 由 [高米] 修改为 []、盘点 由 [0] 修改为 [1]、Borrow Time 由 [2018-12-23 16:46:00] 修改为 []');
+INSERT INTO `t_admin_log` VALUES ('760', '', 'devices', 'handle', 'admin/devices/handle/id/2', '127.0.0.1', '1', 'admin', '1550304682', '盘点设备', '所属人 由 [余志杰] 修改为 []、借阅人 由 [吴选剑] 修改为 []、盘点 由 [0] 修改为 [1]、可用 由 [0] 修改为 [1]、Borrow Time 由 [2019-01-02 09:21:00] 修改为 []');
+INSERT INTO `t_admin_log` VALUES ('761', '', 'devices', 'reset', 'admin/devices/reset?id=1', '127.0.0.1', '1', 'admin', '1550304694', '重置设备[小米1]', '重置设备[小米1]');
+INSERT INTO `t_admin_log` VALUES ('762', '', 'devices', 'setstatus', 'admin/devices/setstatus?id=3&status=2&borrower=undefined', '127.0.0.1', '1', 'admin', '1550306589', '借出设备[华为荣耀7i]', '借出设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('763', '', 'devices', 'setstatus', 'admin/devices/setstatus?id=3&status=0&borrower=undefined', '127.0.0.1', '1', 'admin', '1550306610', '归还设备[华为荣耀7i]', '归还设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('764', '', 'devices', 'setstatus', 'admin/devices/setstatus?id=3&status=2&borrower=undefined', '127.0.0.1', '1', 'admin', '1550306621', '借出设备[华为荣耀7i]', '借出设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('765', '', 'devices', 'setstatus', 'admin/devices/setstatus?id=3&status=0&borrower=undefined', '127.0.0.1', '1', 'admin', '1550306628', '归还设备[华为荣耀7i]', '归还设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('766', '', 'devices', 'setstatus', 'admin/devices/setstatus?id=3&status=2&borrower=undefined', '127.0.0.1', '1', 'admin', '1550306644', '借出设备[华为荣耀7i]', '借出设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('767', '', 'devices', 'setstatus', 'admin/devices/setstatus?id=3&status=0&borrower=undefined', '127.0.0.1', '1', 'admin', '1550306666', '归还设备[华为荣耀7i]', '归还设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('768', '', 'devices', 'setstate', 'admin/devices/setstate?id=3&status=1&borrower=%E9%AB%98%E7%B1%B3', '127.0.0.1', '1', 'admin', '1550306675', '申请设备[华为荣耀7i]', '申请设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('769', '', 'devices', 'setstate', 'admin/devices/setstate?id=4&status=1&borrower=%E7%8E%8B%E7%AB%8B%E7%BE%8A', '127.0.0.1', '1', 'admin', '1550306725', '申请设备[oppo R7s]', '申请设备[oppo R7s]');
+INSERT INTO `t_admin_log` VALUES ('770', '', 'devices', 'setstatus', 'admin/devices/setstatus?id=3&status=2&borrower=%E9%AB%98%E7%B1%B3', '127.0.0.1', '1', 'admin', '1550306842', '借出设备[华为荣耀7i]', '借出设备[华为荣耀7i]');
+INSERT INTO `t_admin_log` VALUES ('771', '', 'devices', 'reset', 'admin/devices/reset?id=2', '127.0.0.1', '1', 'admin', '1550307509', '重置设备[小米2S]', '重置设备[小米2S]');
+INSERT INTO `t_admin_log` VALUES ('772', '', 'devices', 'handle', 'admin/devices/handle/id/7', '127.0.0.1', '1', 'admin', '1550307566', '盘点设备', '盘点 由 [0] 修改为 [1]、可用 由 [0] 修改为 [2]');
+INSERT INTO `t_admin_log` VALUES ('773', '', 'devices', 'handle', 'admin/devices/handle/id/8', '127.0.0.1', '1', 'admin', '1550307580', '盘点设备', '盘点 由 [0] 修改为 [1]、可用 由 [0] 修改为 [3]');
 
 -- ----------------------------
 -- Table structure for t_admin_login
@@ -354,7 +450,7 @@ CREATE TABLE `t_admin_login` (
   `status` tinyint(1) DEFAULT NULL COMMENT '状态：0 登录失败，1 登录成功',
   PRIMARY KEY (`login_id`),
   KEY `user_name` (`admin_user_name`)
-) ENGINE=MyISAM AUTO_INCREMENT=163 DEFAULT CHARSET=utf8 COMMENT='系统用户登录日志';
+) ENGINE=MyISAM AUTO_INCREMENT=176 DEFAULT CHARSET=utf8 COMMENT='系统用户登录日志';
 
 -- ----------------------------
 -- Records of t_admin_login
@@ -421,6 +517,19 @@ INSERT INTO `t_admin_login` VALUES ('159', 'admin', '127.0.0.1', '1448805271', '
 INSERT INTO `t_admin_login` VALUES ('160', 'admin', '127.0.0.1', '1448844333', '1');
 INSERT INTO `t_admin_login` VALUES ('161', 'admin', '127.0.0.1', '1448875363', '1');
 INSERT INTO `t_admin_login` VALUES ('162', 'admin', '127.0.0.1', '1448894464', '1');
+INSERT INTO `t_admin_login` VALUES ('163', 'admin', '127.0.0.1', '1546499819', '0');
+INSERT INTO `t_admin_login` VALUES ('164', 'admin', '127.0.0.1', '1546499831', '1');
+INSERT INTO `t_admin_login` VALUES ('165', 'admin', '127.0.0.1', '1546499990', '1');
+INSERT INTO `t_admin_login` VALUES ('166', 'admin', '127.0.0.1', '1548386923', '1');
+INSERT INTO `t_admin_login` VALUES ('167', 'admin', '127.0.0.1', '1548411052', '1');
+INSERT INTO `t_admin_login` VALUES ('168', 'admin', '127.0.0.1', '1548411109', '1');
+INSERT INTO `t_admin_login` VALUES ('169', 'admin', '127.0.0.1', '1548727018', '1');
+INSERT INTO `t_admin_login` VALUES ('170', 'admin', '127.0.0.1', '1548748101', '1');
+INSERT INTO `t_admin_login` VALUES ('171', 'admin', '127.0.0.1', '1550109071', '1');
+INSERT INTO `t_admin_login` VALUES ('172', 'admin', '127.0.0.1', '1550130903', '1');
+INSERT INTO `t_admin_login` VALUES ('173', 'admin', '127.0.0.1', '1550283092', '1');
+INSERT INTO `t_admin_login` VALUES ('174', 'admin', '127.0.0.1', '1550286444', '1');
+INSERT INTO `t_admin_login` VALUES ('175', 'admin', '127.0.0.1', '1550296351', '1');
 
 -- ----------------------------
 -- Table structure for t_admin_menu
@@ -437,14 +546,14 @@ CREATE TABLE `t_admin_menu` (
   `is_show` tinyint(1) DEFAULT '1' COMMENT '是否显示',
   PRIMARY KEY (`menu_id`),
   KEY `itemname` (`itemname`)
-) ENGINE=MyISAM AUTO_INCREMENT=111 DEFAULT CHARSET=utf8 COMMENT='系统菜单表';
+) ENGINE=MyISAM AUTO_INCREMENT=115 DEFAULT CHARSET=utf8 COMMENT='系统菜单表';
 
 -- ----------------------------
 -- Records of t_admin_menu
 -- ----------------------------
 INSERT INTO `t_admin_menu` VALUES ('13', '个人中心', '', '', '0', '0', '1', '1');
 INSERT INTO `t_admin_menu` VALUES ('11', '系统信息', 'IndexIndex', 'index/index', '1', '13', '1', '1');
-INSERT INTO `t_admin_menu` VALUES ('17', '网站管理员', '', '', '1', '0', '1', '1');
+INSERT INTO `t_admin_menu` VALUES ('17', '网站管理员', '', '', '2', '0', '1', '1');
 INSERT INTO `t_admin_menu` VALUES ('109', '部门管理', 'DepartmentIndex', 'department/index', '0', '17', '0', '1');
 INSERT INTO `t_admin_menu` VALUES ('19', '管理员列表', 'UserIndex', 'user/index', '3', '17', '1', '1');
 INSERT INTO `t_admin_menu` VALUES ('105', '操作记录', 'LogIndex', 'log/index', '2', '101', '1', '1');
@@ -453,6 +562,10 @@ INSERT INTO `t_admin_menu` VALUES ('101', '系统管理', '', '', '3', '0', '1',
 INSERT INTO `t_admin_menu` VALUES ('102', '菜单管理', 'MenuIndex', 'menu/index', '1', '101', '1', '1');
 INSERT INTO `t_admin_menu` VALUES ('103', '权限管理', 'ItemIndex', 'item/index', '0', '101', '1', '1');
 INSERT INTO `t_admin_menu` VALUES ('110', '角色管理', 'RoleIndex', 'role/index', '0', '17', '0', '1');
+INSERT INTO `t_admin_menu` VALUES ('111', '设备管理', '', '', '1', '0', '0', '1');
+INSERT INTO `t_admin_menu` VALUES ('112', '设备申请', 'DevicesIndex', 'devices/index', '1', '111', '0', '1');
+INSERT INTO `t_admin_menu` VALUES ('113', '管理设备', 'DevicesList', 'devices/list', '2', '111', '0', '1');
+INSERT INTO `t_admin_menu` VALUES ('114', '设备盘点', 'DevicesCheck', 'devices/check', '3', '111', '0', '1');
 
 -- ----------------------------
 -- Table structure for t_admin_user
@@ -480,7 +593,7 @@ CREATE TABLE `t_admin_user` (
 -- ----------------------------
 -- Records of t_admin_user
 -- ----------------------------
-INSERT INTO `t_admin_user` VALUES ('1', 'admin', '14e1b600b1fd579f47433b88e8d85291', '超级管理员', null, '0', '1', null, '1', null, '1374054283', '435', '1448894464', '127.0.0.1');
+INSERT INTO `t_admin_user` VALUES ('1', 'admin', '14e1b600b1fd579f47433b88e8d85291', '超级管理员', null, '0', '1', null, '1', null, '1374054283', '447', '1550296351', '127.0.0.1');
 INSERT INTO `t_admin_user` VALUES ('27', 'tester', '14e1b600b1fd579f47433b88e8d85291', '余志杰', '13867429835', '1', '0', null, '1', null, '1431570986', '0', null, null);
 
 -- ----------------------------
@@ -979,15 +1092,76 @@ CREATE TABLE `t_department` (
   `sort` int(10) DEFAULT '0' COMMENT '排序',
   `status` tinyint(1) DEFAULT '1' COMMENT '状态：0 无效， 1 有效',
   PRIMARY KEY (`depart_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COMMENT='部门';
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COMMENT='部门';
 
 -- ----------------------------
 -- Records of t_department
 -- ----------------------------
-INSERT INTO `t_department` VALUES ('1', '客服部', '0', '1');
-INSERT INTO `t_department` VALUES ('2', '市场部', '1', '1');
-INSERT INTO `t_department` VALUES ('3', '技术部', '2', '1');
-INSERT INTO `t_department` VALUES ('7', '综合部', '0', '1');
+INSERT INTO `t_department` VALUES ('1', '前端组', '0', '1');
+INSERT INTO `t_department` VALUES ('2', 'App组', '1', '1');
+INSERT INTO `t_department` VALUES ('3', '测试组', '2', '1');
+INSERT INTO `t_department` VALUES ('7', 'Java组', '0', '1');
+INSERT INTO `t_department` VALUES ('8', '设计组', '0', '1');
+INSERT INTO `t_department` VALUES ('9', '产品组', '0', '1');
+INSERT INTO `t_department` VALUES ('10', '运营组', '0', '1');
+
+-- ----------------------------
+-- Table structure for t_devices
+-- ----------------------------
+DROP TABLE IF EXISTS `t_devices`;
+CREATE TABLE `t_devices` (
+  `id` int(8) NOT NULL AUTO_INCREMENT,
+  `device_name` char(32) NOT NULL COMMENT '设备名',
+  `model` char(16) DEFAULT NULL COMMENT '设备型号',
+  `theNum` char(60) NOT NULL COMMENT '设备编号',
+  `platform` char(16) DEFAULT NULL COMMENT '平台android或者ios',
+  `brand` char(16) DEFAULT NULL COMMENT '品牌',
+  `version` char(30) DEFAULT NULL COMMENT '系统版本 ',
+  `owner` char(16) DEFAULT NULL COMMENT '分配出去的设备，行政借给谁了',
+  `status` char(8) DEFAULT '0' COMMENT '0:未借出的状态；1：申请中；2：借出',
+  `borrower` char(32) DEFAULT NULL COMMENT '借阅者',
+  `other` char(32) DEFAULT NULL COMMENT '设备的其他信息',
+  `comments` char(64) DEFAULT NULL COMMENT '备注',
+  `category` char(16) DEFAULT NULL COMMENT '设备分类',
+  `check_dev` char(4) DEFAULT '0' COMMENT '盘点设备的字段',
+  `old_dev` char(4) DEFAULT '0' COMMENT '0表示设备是好的，1表示设备报废,2表示丢失',
+  `add_time` datetime DEFAULT NULL COMMENT '添加设备的时间',
+  `borrow_time` datetime DEFAULT NULL COMMENT '借出设备的时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of t_devices
+-- ----------------------------
+INSERT INTO `t_devices` VALUES ('1', '小米1', 'MI1', '86209036176878', '1', '小米', '5.0.1', null, '0', null, 'mmm', 'bbbb', '1', '0', '1', '2018-12-22 16:06:00', null);
+INSERT INTO `t_devices` VALUES ('2', '小米2S', 'MI2S', '86741852938746', '1', '小米', '4.4.2', null, '0', null, '', '', '1', '0', '1', '2018-09-12 16:06:00', null);
+INSERT INTO `t_devices` VALUES ('3', '华为荣耀7i', 'HUAWEI7i', '69870000741861', '1', '华为', '5.1', '余志杰', '2', '高米', '', '', '1', '0', '0', '2019-01-22 17:27:00', '2019-02-16 16:47:22');
+INSERT INTO `t_devices` VALUES ('4', 'oppo R7s', 'OppO R7', '97415823698147', '1', 'oppo', '4.3', '余志杰', '1', '王立羊', '', '', '2', '0', '0', '2017-03-17 17:31:00', null);
+INSERT INTO `t_devices` VALUES ('5', 'iphone6', 'iPhone9,1', '35 695606 247492', '2', '苹果', '12.1.2', '余志杰', '0', null, '2012年购买', '苹果6新换', '1', '0', '0', null, null);
+INSERT INTO `t_devices` VALUES ('6', 'iPhone X', 'iPhone10,2', '36 741285 178520', '2', '苹果', '[iOS]12.2.1', '余志杰', '0', null, '', '', '1', '0', '0', null, null);
+INSERT INTO `t_devices` VALUES ('7', 'iPhone5', 'iPhone10,2', '741259 12477 11', '1', '苹果', '[iOS]12.1.2', null, '0', null, '', '', '2', '1', '2', null, null);
+INSERT INTO `t_devices` VALUES ('8', 'iPhone7', 'iPhone9,2', '741259 124177 12', '2', '苹果', '[iOS]10.1.2', null, '0', null, '', '', '1', '1', '3', null, null);
+INSERT INTO `t_devices` VALUES ('9', 'vivo x7', 'vivo Y83A', '86741852938760', '1', 'vivo', '[android] 8.1.0', '', '0', null, '', '', '1', '0', '0', null, null);
+INSERT INTO `t_devices` VALUES ('10', '红米5', 'Redmi Note', '74 741852 369852', '1', '苹果', '[android] 8.1.0', '宋子荣', '0', null, '', '', '1', '0', '0', null, null);
+
+-- ----------------------------
+-- Table structure for t_devices_image
+-- ----------------------------
+DROP TABLE IF EXISTS `t_devices_image`;
+CREATE TABLE `t_devices_image` (
+  `id` int(8) NOT NULL AUTO_INCREMENT,
+  `device_id` int(8) DEFAULT NULL,
+  `path` char(64) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of t_devices_image
+-- ----------------------------
+INSERT INTO `t_devices_image` VALUES ('1', '1', ' IMG_1493.jpg');
+INSERT INTO `t_devices_image` VALUES ('2', '2', ' IMG_1494 (1).jpg');
+INSERT INTO `t_devices_image` VALUES ('3', '3', ' IMG_1570.jpg');
+INSERT INTO `t_devices_image` VALUES ('4', '4', ' IMG_1570.jpg');
 
 -- ----------------------------
 -- Table structure for t_province

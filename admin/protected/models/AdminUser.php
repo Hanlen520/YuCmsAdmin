@@ -15,6 +15,7 @@ class AdminUser extends ActiveRecord
 	public $op;
 	public $scode;
 	public $depart_name;
+    public $role;
 	
     public static function model($className=__CLASS__)
     {

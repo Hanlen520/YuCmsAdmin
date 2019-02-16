@@ -119,7 +119,9 @@
                     if (r.status == 1)
                     {
                         layer.msg(r.msg,{icon:1,time:2000},function(){
-                            layer_close();
+                            parent.location.reload();
+                            var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+                            parent.layer.close(index);
                         });
                     } else
                     {

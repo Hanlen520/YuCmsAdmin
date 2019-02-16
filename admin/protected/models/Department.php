@@ -7,7 +7,7 @@
 class Department extends ActiveRecord
 {
 	public $op;
-	
+
     public static function model($className=__CLASS__)
     {
         return parent::model($className);
