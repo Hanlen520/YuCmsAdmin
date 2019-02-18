@@ -15,7 +15,7 @@
 <link href="css/H-ui.min.css" rel="stylesheet" type="text/css" />
 <link href="css/H-ui.admin.css" rel="stylesheet" type="text/css" />
 <link href="skin/default/skin.css" rel="stylesheet" type="text/css" id="skin" />
-<link href="lib/Hui-iconfont/1.0.1/iconfont.css" rel="stylesheet" type="text/css" />
+<link href="lib/Hui-iconfont/1.0.9/iconfont.css" rel="stylesheet" type="text/css" />
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <!--[if IE 6]>
 <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
@@ -24,18 +24,7 @@
 <title><?php echo CHtml::encode(Yii::app()->name); ?></title>
 </head>
 <body>
-<header class="Hui-header cl"> <a class="Hui-logo l" title="H-ui.admin v2.3" href="/admin//border/index">H-ui.admin</a> <a class="Hui-logo-m l" href="/" title="H-ui.admin">H-ui</a> <span class="Hui-subtitle l">V2.3</span>
-	<nav class="mainnav cl" id="Hui-nav">
-		<ul>
-			<li class="dropDown dropDown_click dropDown_hover"><a href="javascript:;" class="dropDown_A"><i class="Hui-iconfont">&#xe600;</i> 新增 <i class="Hui-iconfont">&#xe6d5;</i></a>
-				<ul class="dropDown-menu radius box-shadow">
-					<li><a href="javascript:;" onclick="article_add('添加设备','article-add.html')"><i class="Hui-iconfont">&#xe616;</i> 资讯</a></li>
-					<li><a href="javascript:;" onclick="picture_add('添加部门','picture-add.html')"><i class="Hui-iconfont">&#xe613;</i> 图片</a></li>
-					<li><a href="javascript:;" onclick="member_add('添加用户','member-add.html','','510')"><i class="Hui-iconfont">&#xe60d;</i> 用户</a></li>
-				</ul>
-			</li>
-		</ul>
-	</nav>
+<header class="Hui-header cl"><a class="Hui-logo l" title="YuCMS.admin v2.3" href="/admin//border/index"> <i class="Hui-iconfont mr-10">&#xe667;</i>YuCMS.admin</a> <a class="Hui-logo-m l" href="/" title="YuCMS.admin">H-ui</a> <span class="Hui-subtitle l">V2.3</span>
 	<ul class="Hui-userbar">
 		<li><?php echo Yii::app()->user->getState('REAL_NAME')?></li>
 		<li class="dropDown dropDown_hover"><a href="#" class="dropDown_A"><?php echo Yii::app()->user->getState('USER_NAME')?><i class="Hui-iconfont">&#xe6d5;</i></a>
