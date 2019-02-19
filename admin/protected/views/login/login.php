@@ -24,7 +24,7 @@
       </div>
       <div class="row cl">
         <div class="formControls col-8 col-offset-3">
-          <button  type="submit" class="btn btn-success radius size-L mr-50" href="javascript:void(0)"><i class="Hui-iconfont">&#xe67a;</i>登&nbsp;&nbsp;&nbsp;&nbsp;录</button>
+          <button  type="submit" class="btn btn-success radius size-L mr-50" href="javascript:void(0)">登&nbsp;&nbsp;&nbsp;&nbsp;录</button>
         </div>
       </div>
     </form>
