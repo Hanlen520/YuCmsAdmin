@@ -69,7 +69,7 @@
     </div>
     <div class="row cl">
         <div class="col-offset-4">
-            <input class="btn btn-primary radius" type="button" url="<?php echo $model->id ? $this->createUrl('devices/edit/id/'.$model->id) : $this->createUrl('add')?>"value="&nbsp;&nbsp;保存&nbsp;&nbsp;">
+            <input class="btn btn-primary radius" type="button" url="<?php echo $model->id ? $this->createUrl('devices/edit/id/'.$model->id) : $this->createUrl('add')?>" value="&nbsp;&nbsp;保存&nbsp;&nbsp;">
         </div>
     </div>
 
